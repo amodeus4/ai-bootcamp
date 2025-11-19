@@ -1,17 +1,17 @@
-#same code as we've used before (using minsearch)
-
-from minsearch import Index
-from typing import Any, Dict, List
-import docs
+# same code as we've used before (using minsearch)
 
 import pickle
 from pathlib import Path
+from typing import Any, Dict, List
+from minsearch import Index
+import docs
 
 
 class SearchTools:
-
-    def __init__(self, index: Index):
+    def __init__(self, index: Index, file_index: dict[str, Any], top_k: int):
         self.index = index
+        self.file_index = file_index
+        self.top_k = top_k
 
     def search(self, query: str) -> List[Dict[str, Any]]:
         """
@@ -28,47 +28,83 @@ class SearchTools:
             num_results=5,
         )
 
-# index preparation code with minsearch
-def prepare_index():
-    github_data = docs.read_github_data() # get data from GitHub
-    parsed_data = docs.parse_data(github_data) # parse the data with frontmatter
-    chunks = docs.chunk_documents(parsed_data) # chunk the documents
+    def read_file(self, filename: str) -> str:
+        """
+        Retrieve the contents of a file from the file index if it exists.
 
-    index = Index(
-        text_fields=["title", "description", "content"]
-    )
+        Args:
+            filename (str): The name of the file to read.
+
+        Returns:
+            str: The file's contents if found, otherwise an error message
+            indicating that the file does not exist.
+        """
+        if filename in self.file_index:
+            return self.file_index[filename]
+        return "File doesn't exist"
+
+
+def load_data():
+    github_data = docs.read_github_data()
+    parsed_data = docs.parse_data(github_data)
+    return parsed_data
+
+
+def prepare_search_index(parsed_data, chunk_size: int, chunk_step: int):
+    chunks = docs.chunk_documents(parsed_data, size=chunk_size, step=chunk_step)
+
+    index = Index(text_fields=["title", "description", "content"])
 
     index.fit(chunks)
     return index
 
-# add caching for results to avoid re-indexing every time
-def prepare_index_cached():
+
+def prepare_file_index(parsed_data):
+    file_index = {}
+
+    for item in parsed_data:
+        filename = item["filename"]
+        content = item["content"]
+        file_index[filename] = content
+
+    return file_index
+
+
+def _prepare_search_tools(chunk_size: int, chunk_step: int, top_k: int):
+    parsed_data = load_data()
+
+    search_index = prepare_search_index(
+        parsed_data=parsed_data, chunk_size=chunk_size, chunk_step=chunk_step
+    )
+
+    file_index = prepare_file_index(parsed_data=parsed_data)
+
+    return SearchTools(index=search_index, file_index=file_index, top_k=top_k)
+
+
+def prepare_search_tools(chunk_size: int, chunk_step: int, top_k: int):
     cache_dir = Path(".cache")
     cache_dir.mkdir(exist_ok=True)
 
-    index_path = cache_dir / "search_index.bin"
+    cache_file = cache_dir / f"search_tools_{chunk_size}_{chunk_step}_{top_k}.bin"
 
-    if index_path.exists():
-        with open(index_path, "rb") as f:
-            index = pickle.load(f)
-            return index
+    if cache_file.exists():
+        with open(cache_file, "rb") as f:
+            search_tools = pickle.load(f)
+            return search_tools
 
-    index = prepare_index()
+    search_tools = _prepare_search_tools(
+        chunk_size=chunk_size, chunk_step=chunk_step, top_k=top_k
+    )
 
-    with open(index_path, "wb") as f:
-        pickle.dump(index, f)
+    with open(cache_file, "wb") as f:
+        pickle.dump(search_tools, f)
 
-    return index
-
-# function to get search tools
-def get_search_tools():
-    index = prepare_index_cached()
-    return SearchTools(index=index)
+    return search_tools
 
 
 if __name__ == "__main__":
-    search_tools = get_search_tools()
-    query = "data quality checks"
+    search_tools = prepare_search_tools()
     results = search_tools.search("data drift")
     for r in results:
         print(r)

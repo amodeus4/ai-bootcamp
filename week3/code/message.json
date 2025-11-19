@@ -1,0 +1,46 @@
+{
+    "found_answer": true,
+    "title": "How to Monitor Data Drift in Production",
+    "sections": [
+        {
+            "heading": "Overview",
+            "content": "Data drift detection is crucial for maintaining model performance in production environments. Evidently provides comprehensive tools to monitor data drift over time.",
+            "references": [
+                {
+                    "title": "Data Drift Documentation",
+                    "filename": "docs/user-guide/drift.md"
+                },
+                {
+                    "title": "Monitoring Setup Guide",
+                    "filename": "docs/user-guide/monitoring-setup.md"
+                }
+            ]
+        },
+        {
+            "heading": "Using Evidently's Drift Detector",
+            "content": "Evidently's DataDriftProfile allows you to detect statistical changes in feature distributions. You can set thresholds and get automated alerts when drift exceeds your defined limits.",
+            "references": [
+                {
+                    "title": "API Reference - DataDriftProfile",
+                    "filename": "docs/api-reference/drift-profile.md"
+                }
+            ]
+        },
+        {
+            "heading": "Production Integration",
+            "content": "For production deployments, use Evidently's monitoring dashboard to track drift metrics in real-time. The library integrates with popular frameworks and provides webhook support for alerting systems.",
+            "references": [
+                {
+                    "title": "Dashboard Setup",
+                    "filename": "docs/user-guide/dashboard.md"
+                }
+            ]
+        }
+    ],
+    "references": [
+        {
+            "title": "Main Documentation",
+            "filename": "docs/index.md"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+Now we can run the entire evaluation pipeline with simple commands:
+
+Create a sample dataset:
+
+uv run python -m evals.sample_ground_truth \
+    --sample-size 25 \
+    --extra-indices 150 \
+    --input evals/ground_truth_evidently.csv \
+    --output=evals/gt-sample.csv
+
+
+This creates a manageable sample from our full ground truth dataset.
+
+Run the complete evaluation:
+
+uv run python -m evals.eval_orchestrator \
+    --csv evals/gt-sample.csv 
+
+
+This command runs both the agent application and judge evaluation steps automatically.
+
+Sample Evaluation Report
+
+Here's an example report (for 5 examples):
+
+Evaluation Report
+==================
+Average scores:
+instructions_follow    0.8
+instructions_avoid     1.0
+answer_relevant        1.0
+answer_clear           1.0
+answer_citations       0.6
+completeness           0.2
+tool_call_search       1.0
+
+Total Evaluation Cost: $0.02
+Samples Evaluated: 5
