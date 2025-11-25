@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.env
+.env.local
+token.pickle
+credentials.json
+.cache/
+*.log
+.idea/
+.vscode/

@@ -1,0 +1,167 @@
+question,expected_approach,difficulty,category,source
+Show me emails from the last 7 days,Use elasticsearch_search with date_from parameter,beginner,date-based search,manual_q1
+What emails from my boss are unread?,Use elasticsearch_search with sender filter and search_text,beginner,sender + status search,manual_q1
+Find all conversation with john@company.com,Use conversation_history tool for complete thread,intermediate,conversation threading,manual_q1
+Show me emails with invoices,Use search_attachments for PDF/document content,intermediate,attachment search,manual_q1
+What emails mention budget?,Use elasticsearch_search with keyword,beginner,keyword search,manual_q1
+Show me all emails from last month.,Use elasticsearch_search with date_from parameter for last month,beginner,date-based search,llm_generated
+Find unread emails from my project manager.,Use elasticsearch_search with sender filter and status filter for unread,beginner,sender + status search,llm_generated
+Get me the full conversation with sarah@company.com.,Use conversation_history tool for complete thread,intermediate,conversation threading,llm_generated
+Show me emails that have contracts attached.,Use search_attachments for specific document types,intermediate,attachment search,llm_generated
+What emails have the word 'meeting' in them?,Use elasticsearch_search with keyword for 'meeting',beginner,keyword search,llm_generated
+Find all emails sent to my team in the past week.,Use elasticsearch_search with recipient filter and date range,beginner,recipient + date search,llm_generated
+Where are the emails containing the word 'proposal' from last quarter?,Use elasticsearch_search with keyword and date range filter,intermediate,keyword + date search,llm_generated
+Retrieve all conversations related to the 'Project X' email thread.,Use conversation_history tool for specific thread based on subject,intermediate,conversation threading,llm_generated
+Send me the emails with attachments larger than 5MB.,Use search_attachments with size filter,advanced,attachment size search,llm_generated
+What emails have a high priority flag?,Use elasticsearch_search with priority filter,beginner,status search,llm_generated
+Get me unread emails from all sales team members.,Use elasticsearch_search with multiple sender filters and status filter,intermediate,sender + status search,llm_generated
+Find all emails from clients with the subject 'Feedback'.,Use elasticsearch_search with sender filter and subject keyword,beginner,subject + sender search,llm_generated
+Show me all emails that mention the word 'urgent' sent by my supervisor.,Use elasticsearch_search with sender filter and keyword,intermediate,sender + keyword search,llm_generated
+Retrieve all emails from the past three months that include any attachments.,Use elasticsearch_search with date range and attachment filter,intermediate,date + attachment search,llm_generated
+What emails did I receive from my CEO last week?,Use elasticsearch_search with sender filter and date range,beginner,sender + date search,llm_generated
+Find the email attachments related to the budget review.,Use search_attachments with keyword 'budget review',intermediate,attachment keyword search,llm_generated
+Show me emails that are flagged as important but not yet read.,Use elasticsearch_search with flag filter and status filter,intermediate,status + flag search,llm_generated
+List all emails sent to my team during the last company retreat.,Use elasticsearch_search with recipient filter and date range,beginner,recipient + date search,llm_generated
+What emails do I have that reference my last vacation?,Use elasticsearch_search with keyword for 'vacation',beginner,keyword search,llm_generated
+Get all emails from my accountant regarding the tax documents.,Use elasticsearch_search with sender filter and subject keyword,intermediate,sender + subject search,llm_generated
+Show me emails that contain the word 'feedback' and have attachments.,Use elasticsearch_search with keyword and attachment filter,intermediate,keyword + attachment search,llm_generated
+Retrieve the last five emails I received from my marketing team.,Use elasticsearch_search with recipient filter and limit results,beginner,recipient + limit search,llm_generated
+What emails contain terms related to 'budget' and were sent this month?,Use elasticsearch_search with keyword and date range filter,intermediate,keyword + date search,llm_generated
+Show me emails from clients with attachments over 10MB.,Use search_attachments with sender filter and size filter,advanced,sender + attachment size search,llm_generated
+Find emails that were sent to me but I haven't replied to yet.,Use elasticsearch_search with recipient filter and reply status filter,intermediate,reply status + recipient search,llm_generated
+What emails have the keyword 'deadline' in the subject line?,Use elasticsearch_search with subject filter for 'deadline',beginner,subject keyword search,llm_generated
+Get me the emails sent to the entire department last month.,Use elasticsearch_search with recipient filter for department and date range,beginner,recipient + date search,llm_generated
+Show conversations with my team regarding the annual report.,Use conversation_history tool for specific thread based on subject,intermediate,conversation threading,llm_generated
+Retrieve emails with attachments discussing the new marketing strategy.,Use search_attachments with keyword 'marketing strategy',intermediate,attachment keyword search,llm_generated
+Find unread emails in my promotions folder.,Use elasticsearch_search with folder filter for promotions and status filter,beginner,folder + status search,llm_generated
+What emails did I receive from my vendor last quarter with attachments?,"Use elasticsearch_search with sender filter, date range, and attachment filter",intermediate,sender + date + attachment search,llm_generated
+Show me emails where I was cc'd on the conversation last week.,Use elasticsearch_search with cc filter and date range,beginner,cc + date search,llm_generated
+Find all emails mentioning 'team building' with any attachments.,Use elasticsearch_search with keyword 'team building' and attachment filter,intermediate,keyword + attachment search,llm_generated
+Can you show me all my unread emails from last month?,Use elasticsearch_search with date_from and status filters,beginner,date + status search,llm_generated
+What emails did I receive about the last team meeting?,Use elasticsearch_search with keyword and date filters,beginner,keyword + date search,llm_generated
+Show me emails that include the word 'project' but are not from my manager.,Use elasticsearch_search with keyword and sender filter,intermediate,keyword + sender filter,llm_generated
+Find any emails from HR that contain attachments.,Use elasticsearch_search with sender filter and search_attachments,intermediate,attachment + sender search,llm_generated
+What was the last email I received from my client?,Use elasticsearch_search with date sorting and sender filter,beginner,sender + date search,llm_generated
+Can I see the latest email threads with the marketing team?,Use conversation_history tool with sender filter,intermediate,conversation threading,llm_generated
+Show me all emails that include a presentation file.,Use search_attachments for presentation file types,beginner,attachment search,llm_generated
+What emails have been sent to me that mention 'deadline'?,Use elasticsearch_search with keyword filter,beginner,keyword search,llm_generated
+Can you find all emails from last week that are flagged?,Use elasticsearch_search with date and status filters,intermediate,date + status search,llm_generated
+Find emails with attachments that mention 'contract'.,Use elasticsearch_search with keyword filter and search_attachments,intermediate,attachment + keyword search,llm_generated
+Show me emails from the last three days that are still unread.,Use elasticsearch_search with date and status filters,beginner,date + status search,llm_generated
+What emails have attachments larger than 5MB?,Use search_attachments with size filter,advanced,attachment size search,llm_generated
+Can you summarize the conversation history with alice@company.com?,Use conversation_history tool for complete thread,intermediate,conversation threading,llm_generated
+Find all emails from suppliers that mention 'quote'.,Use elasticsearch_search with sender filter and keyword search,intermediate,keyword + sender filter,llm_generated
+What were the last five emails I received this morning?,Use elasticsearch_search with date sorting and limit,beginner,date search,llm_generated
+Show me emails that contain 'feedback' and are marked as important.,Use elasticsearch_search with keyword and status filters,intermediate,keyword + status search,llm_generated
+Can you find all emails that have a PDF attachment?,Use search_attachments for PDF files,beginner,attachment search,llm_generated
+What conversations include emails from tech_support@company.com?,Use conversation_history tool with sender filter,intermediate,conversation threading,llm_generated
+Show me emails that were sent during the last two weeks that are flagged.,Use elasticsearch_search with date and status filters,intermediate,date + status search,llm_generated
+What were the last five emails I sent to my team?,Use elasticsearch_search with sender filter and date sorting,beginner,sender search,llm_generated
+Can you show me emails that discuss 'budget' and are from my finance team?,Use elasticsearch_search with keyword and sender filters,intermediate,keyword + sender filter,llm_generated
+Find any emails that have images attached.,Use search_attachments for image file types,beginner,attachment search,llm_generated
+Show me my unread emails from last quarter.,Use elasticsearch_search with date and status filters,beginner,date + status search,llm_generated
+What emails mention 'holiday' and were sent by my supervisor?,Use elasticsearch_search with keyword and sender filters,intermediate,keyword + sender filter,llm_generated
+Can you show me emails that include 'meeting notes' over the past month?,Use elasticsearch_search with keyword and date filters,beginner,keyword + date search,llm_generated
+Find all email threads I've had with support@company.com.,Use conversation_history tool with sender filter,intermediate,conversation threading,llm_generated
+What emails were sent to me after 5 PM yesterday?,Use elasticsearch_search with date and time filters,advanced,date + time search,llm_generated
+Show me emails with the keyword 'urgent' that are older than a month.,Use elasticsearch_search with keyword and date filters,intermediate,keyword + date search,llm_generated
+Can you retrieve all emails that are marked as spam?,Use elasticsearch_search with spam filter,advanced,status search,llm_generated
+What emails contain the word 'revised' and were sent in the last week?,Use elasticsearch_search with keyword and date filters,beginner,keyword + date search,llm_generated
+Can you summarize the latest emails from my project team?,Use conversation_history tool with sender filter,intermediate,conversation threading,llm_generated
+Can you show me all emails I received last month?,Use elasticsearch_search with date_from and date_to parameters,beginner,date-based search,llm_generated
+What unread emails have attachments?,Use elasticsearch_search with status filter and attachment presence,beginner,status + attachment search,llm_generated
+Find emails from my project team that are older than three weeks.,Use elasticsearch_search with sender filter and date_from parameter,intermediate,sender + date search,llm_generated
+Show me all emails that contain meeting notes.,Use search_attachments for keyword in document content,intermediate,attachment search,llm_generated
+What emails did I send last week?,Use elasticsearch_search with date_from parameter for sent items,beginner,date-based search,llm_generated
+Find emails from my HR department that are unread.,Use elasticsearch_search with sender filter and status filter,beginner,sender + status search,llm_generated
+Show me the entire conversation thread with alice@company.com.,Use conversation_history tool for all messages from that sender,intermediate,conversation threading,llm_generated
+What emails do I have related to the marketing strategy?,Use elasticsearch_search with keyword 'marketing strategy',beginner,keyword search,llm_generated
+Can you find all emails containing client feedback?,Use elasticsearch_search with keyword filter,beginner,keyword search,llm_generated
+List unread emails from my last conference.,Use elasticsearch_search with category filter and status filter,intermediate,category + status search,llm_generated
+Show me emails that have the word 'urgent' or 'important'.,Use elasticsearch_search with multiple keyword filters,intermediate,keyword search,llm_generated
+What emails have been flagged for follow-up?,Use elasticsearch_search with flagged status,beginner,status search,llm_generated
+Find all emails with attachments over 5MB.,Use search_attachments with filter for size,advanced,attachment search,llm_generated
+Show me emails I received from my manager and are marked as important.,Use elasticsearch_search with sender filter and status filter,intermediate,sender + status search,llm_generated
+What emails were sent to the entire department last week?,Use elasticsearch_search with recipient filter for department and date_from,intermediate,recipient + date search,llm_generated
+List all emails sent by me that mention project deadlines.,Use elasticsearch_search with sender filter and keyword filter,intermediate,sender + keyword search,llm_generated
+Can you find emails with images attached?,Use search_attachments with filter for image file types,intermediate,attachment search,llm_generated
+Show me all emails from vendors that have invoices attached.,Use elasticsearch_search with sender filter and attachment filter,advanced,sender + attachment search,llm_generated
+What emails do I have flagged from this month?,Use elasticsearch_search with flagged status and date filter,beginner,status + date search,llm_generated
+Find all emails from the last quarter that mention 'budget cuts'.,Use elasticsearch_search with date range and keyword filter,intermediate,date + keyword search,llm_generated
+Show me the conversation history with a specific client over the past year.,Use conversation_history tool with date range filter,advanced,conversation threading,llm_generated
+What are all the emails I've sent that are still unanswered?,Use elasticsearch_search with sender filter and unanswered status,intermediate,sender + status search,llm_generated
+Can you show me emails containing project updates?,Use elasticsearch_search with keyword filter for project updates,beginner,keyword search,llm_generated
+Find emails that have both 'meeting' and 'confirmation' in the subject.,Use elasticsearch_search with multiple keyword filters for subject,intermediate,keyword search,llm_generated
+What emails did I receive from last week that are marked as important?,Use elasticsearch_search with date_from and status filter,intermediate,date + status search,llm_generated
+Show me emails with feedback from our last project.,Use elasticsearch_search with keyword filter for feedback,beginner,keyword search,llm_generated
+What emails have attachments that are Word documents?,Use search_attachments with filter for Word file types,intermediate,attachment search,llm_generated
+List all emails I received this week regarding budget meetings.,Use elasticsearch_search with date_from and keyword filter,intermediate,date + keyword search,llm_generated
+Can you find all emails from our supplier that discuss delivery delays?,Use elasticsearch_search with sender filter and keyword filter,intermediate,sender + keyword search,llm_generated
+Show me the emails flagged for follow-up that are older than three months.,Use elasticsearch_search with flagged status and date_from filter,advanced,status + date search,llm_generated
+What are all the emails I sent this month that are marked as 'urgent'?,Use elasticsearch_search with sender filter and status filter,beginner,sender + status search,llm_generated
+Find all emails with the word 'contract' in the subject or body.,Use elasticsearch_search with keyword filter for subject and body,intermediate,keyword search,llm_generated
+Show me emails regarding the annual report discussion.,Use elasticsearch_search with keyword filter for annual report,beginner,keyword search,llm_generated
+Can you show me all emails I received this month?,Use elasticsearch_search with date_from parameter for the current month,beginner,date-based search,llm_generated
+What unread messages do I have from my team?,Use elasticsearch_search with sender filter and status filter for unread,beginner,sender + status search,llm_generated
+Find emails from last week that contain 'meeting notes'.,Use elasticsearch_search with date_from and keyword filter,beginner,date + keyword search,llm_generated
+Show me all emails that have attachments.,Use search_attachments to filter for emails containing attachments,beginner,attachment search,llm_generated
+What emails did I receive from HR this week?,Use elasticsearch_search with sender filter and date_from parameter,beginner,sender + date search,llm_generated
+Can you find emails that mention 'project deadline'?,Use elasticsearch_search with keyword filter for 'project deadline',beginner,keyword search,llm_generated
+Show me emails from the last 30 days that have the word 'important'.,Use elasticsearch_search with date_from and keyword filter,beginner,date + keyword search,llm_generated
+What emails did I receive from clients that are marked as unread?,Use elasticsearch_search with sender filter for clients and status filter for unread,beginner,sender + status search,llm_generated
+Find all my emails to the marketing department.,Use elasticsearch_search with recipient filter,beginner,recipient filter,llm_generated
+What emails did I send that have attachments?,Use search_attachments with sender filter for my email address,beginner,attachment search,llm_generated
+Can you show me emails from my last project?,Use elasticsearch_search with keywords related to the project,intermediate,keyword search,llm_generated
+Find all emails that are part of a thread with Sarah.,Use conversation_history tool for complete thread with Sarah,intermediate,conversation threading,llm_generated
+Show me invoices received in the last two weeks.,Use elasticsearch_search with date_from and attachment filter for invoices,intermediate,attachment + date search,llm_generated
+What unread emails are there from my project manager?,Use elasticsearch_search with sender filter for project manager and status filter for unread,intermediate,sender + status search,llm_generated
+Can you list all emails that mention the word 'urgent'?,Use elasticsearch_search with keyword filter for 'urgent',intermediate,keyword search,llm_generated
+Find all conversations with the account team.,Use conversation_history tool for complete threads with the account team,intermediate,conversation threading,llm_generated
+Show me emails with attachments larger than 5MB.,Use search_attachments with size filter for >5MB,intermediate,attachment search,llm_generated
+What emails are there about the budget review that I haven't read?,Use elasticsearch_search with keyword filter for 'budget review' and status filter for unread,intermediate,keyword + status search,llm_generated
+Can you show me emails from the last quarter that mention 'sales report'?,Use elasticsearch_search with date_from for the last quarter and keyword filter,intermediate,date + keyword search,llm_generated
+What emails did I send that have 'feedback' in the subject line?,Use elasticsearch_search with sender filter and subject filter for 'feedback',intermediate,subject filter,llm_generated
+Show me all unread emails from the last month that have attachments.,Use elasticsearch_search with date_from for last month and status filter for unread and attachments,intermediate,date + status + attachment search,llm_generated
+Find conversations with my teammates that mention 'updates'.,Use conversation_history tool with keyword filter for 'updates',intermediate,conversation threading + keyword search,llm_generated
+Can you filter emails to show only those from our suppliers?,Use elasticsearch_search with sender filter for known suppliers,intermediate,sender filter,llm_generated
+What emails did I receive that reference the '2024 budget' and are unread?,Use elasticsearch_search with keyword filter and status filter for unread,intermediate,keyword + status search,llm_generated
+Show me all conversations with attachments from the past month.,Use conversation_history tool with date_from for last month and attachment filter,intermediate,conversation threading + attachment search,llm_generated
+What are the emails from my director that include 'strategy' in them?,Use elasticsearch_search with sender filter and keyword filter for 'strategy',intermediate,sender + keyword search,llm_generated
+Can you show me the last 10 emails I sent?,Use elasticsearch_search with sender filter and limit results,beginner,sent emails,llm_generated
+Find me any emails from last month that were not replied to.,Use elasticsearch_search with date_from and status filter for unreplied,advanced,date + status search,llm_generated
+What emails did I receive from my clients about the new contract?,Use elasticsearch_search with sender filter for clients and keyword filter for 'new contract',intermediate,sender + keyword search,llm_generated
+Show me all emails that have been marked as spam.,Use elasticsearch_search with status filter for spam,beginner,spam filter,llm_generated
+Can you find all emails from the finance department that contain 'tax'?,Use elasticsearch_search with sender filter and keyword filter for 'tax',intermediate,sender + keyword search,llm_generated
+What emails do I have that are flagged for follow-up?,Use elasticsearch_search with status filter for flagged emails,intermediate,status search,llm_generated
+Show me emails with attachments that are older than a year.,Use search_attachments with date filter for older than a year,advanced,attachment + date search,llm_generated
+What emails did I send to the IT department last year?,Use elasticsearch_search with recipient filter and date_from for last year,intermediate,recipient + date search,llm_generated
+Can you find all unread emails from my team members?,Use elasticsearch_search with sender filter and status,beginner,sender + status search,llm_generated
+Show me emails from the last month that include attachments.,Use elasticsearch_search with date filter and search_attachments,intermediate,date + attachment search,llm_generated
+What emails have the word 'urgent' in them?,Use elasticsearch_search with keyword,beginner,keyword search,llm_generated
+Find all emails related to the quarterly report.,Use elasticsearch_search with relevant keywords,beginner,keyword search,llm_generated
+Can you give me the email threads with sarah@company.com?,Use conversation_history tool for complete thread,intermediate,conversation threading,llm_generated
+Show me emails I received last week.,Use elasticsearch_search with date_from parameter,beginner,date-based search,llm_generated
+What emails from my clients are flagged as important?,Use elasticsearch_search with sender filter and status filter,intermediate,sender + status search,llm_generated
+Find emails that contain links to documents.,Use elasticsearch_search with keyword search for 'link',intermediate,keyword search,llm_generated
+Show me emails from last year that mention 'investment'.,Use elasticsearch_search with date filter and keyword,intermediate,date + keyword search,llm_generated
+Can you show me my unread emails from the past two weeks?,Use elasticsearch_search with date filter and unread status,beginner,date + status search,llm_generated
+Find all emails sent by my manager in March.,Use elasticsearch_search with sender and date filters,intermediate,sender + date search,llm_generated
+What emails have a subject that includes 'meeting notes'?,Use elasticsearch_search with subject filter,beginner,subject search,llm_generated
+Show me all emails with 'invoice' in the attachment name.,Use search_attachments with keyword in filename,intermediate,attachment name search,llm_generated
+Can you find any emails that were sent last Friday?,Use elasticsearch_search with specific date,beginner,date-based search,llm_generated
+What conversations have I had with the marketing team?,Use conversation_history tool for relevant addresses,intermediate,conversation threading,llm_generated
+Show me emails that contain the phrase 'thank you'.,Use elasticsearch_search with exact phrase,beginner,keyword search,llm_generated
+Find all emails from the last 30 days that mention 'training'.,Use elasticsearch_search with date and keyword filters,intermediate,date + keyword search,llm_generated
+Can you show me emails with attachments that are Word documents?,Use search_attachments for specific document type,intermediate,attachment type search,llm_generated
+What emails are marked as unread from my suppliers?,Use elasticsearch_search with sender filter and unread status,intermediate,sender + status search,llm_generated
+Show me emails from the last year that have no attachments.,Use elasticsearch_search with date filter and check attachments,advanced,date + attachment status search,llm_generated
+Can you find emails with attachments that were sent by Alex?,Use elasticsearch_search with sender and search_attachments,intermediate,sender + attachment search,llm_generated
+What emails did I receive about the product launch?,Use elasticsearch_search with keyword related to product launch,beginner,keyword search,llm_generated
+Find conversation threads that include both Steve and Lisa.,Use conversation_history tool for both senders,advanced,complex conversation threading,llm_generated
+What emails received last weekend are still unread?,Use elasticsearch_search with date and status filters,intermediate,date + status search,llm_generated
+Show me emails from contractors that mention 'contract'.,Use elasticsearch_search with sender filter and keyword,intermediate,sender + keyword search,llm_generated
+Can you find emails with a specific date in the subject line?,Use elasticsearch_search with subject filter and date format,advanced,subject + date search,llm_generated
+Show me all emails related to last month's budget meeting.,Use elasticsearch_search with date filter and keywords,intermediate,date + keyword search,llm_generated
+Can you find me all emails from my personal account?,Use elasticsearch_search with sender filter for personal account,beginner,sender filter search,llm_generated
+What emails from last quarter still need a response?,Use elasticsearch_search with date filter and response status,advanced,date + response status search,llm_generated
+Show me emails that mention 'project deadline' and were sent this week.,Use elasticsearch_search with date and keyword filters,intermediate,date + keyword search,llm_generated

@@ -1,0 +1,23 @@
+[project]
+name = "email-agent"
+version = "0.1.0"
+description = "Email management agent powered by OpenAI and Elasticsearch"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-auth-oauthlib",
+    "google-api-python-client",
+    "elasticsearch",
+    "openai",
+    "pydantic",
+    "python-dotenv",
+    "markitdown",
+    "pandas>=2.3.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "jupyter",
+    "ipython",
+]

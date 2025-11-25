@@ -1,0 +1,1436 @@
+question,answer,difficulty,category,expected_approach,source
+Show me emails from the last 7 days,"It looks like there are no emails from the last 7 days. If you'd like, I can help you check for unread emails or look for emails from a specific sender or with certain keywords. Let me know!",beginner,date-based search,Use elasticsearch_search with date_from parameter,manual_q1
+What emails from my boss are unread?,"You don't have any unread emails from your boss at the moment. If you need help with anything else, feel free to ask!",beginner,sender + status search,Use elasticsearch_search with sender filter and search_text,manual_q1
+Find all conversation with john@company.com,"It looks like there are no emails in the conversation history with john@company.com. If you need assistance with anything else, feel free to ask!",intermediate,conversation threading,Use conversation_history tool for complete thread,manual_q1
+Show me emails with invoices,"Here are some recent emails related to invoices:
+
+1. **From**: MYS USA ACCOUNTING (florida@mysusainc.com)  
+   **To**: info@luxcmaryachtservices.com  
+   **Date**: November 24, 2025  
+   **Subject**: VIV Invoices  
+   **Snippet**: ""Could you please provide the initial invoices for VIV?""  
+   **Attachments**: None
+
+2. **From**: The Google Workspace Team (workspace-noreply@google.com)  
+   **To**: florida@mysusainc.com  
+   **Date**: November 22, 2025  
+   **Subject**: Get paid by referring Google Workspace  
+   **Snippet**: ""Earn rewards by referring Google Workspace""  
+   **Attachments**: None
+
+3. **From**: Jennifer Malone (florida@medyachtservices.com)  
+   **To**: Multiple recipients  
+   **Date**: November 21, 2025  
+   **Subject**: Re: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Snippet**: ""Thank you for the payment received on 12th November.""  
+   **Attachments**: 4 (images)
+
+4. **From**: Melissa Swain (mswain@sterlinggloballtd.com)  
+   **To**: MYS USA ACCOUNTING (florida@mysusainc.com)  
+   **Date**: November 21, 2025  
+   **Subject**: RE: Re:  
+   **Snippet**: ""Kindly note that payment was applied twice for invoice 2025-002LH.""  
+   **Attachments**: 3 (images)
+
+5. **From**: Pauline Le Thiec (plethiec@camperandnicholsons.com)  
+   **To**: MYS USA ACCOUNTING (florida@mysusainc.com)  
+   **Date**: November 21, 2025  
+   **Subject**: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Snippet**: ""The attached invoice was paid on the 11th of November.""  
+   **Attachments**: 3 (PDFs)
+
+It seems there are multiple emails regarding invoice **2025-002LH**. Unfortunately, I couldn't find any attachments related to invoices in the emails. If you'd like more details on a specific email or need anything else, just let me know!",intermediate,attachment search,Use search_attachments for PDF/document content,manual_q1
+What emails mention budget?,"It looks like there are no emails mentioning the term ""budget"" in your inbox. If you have any other keywords or specific topics in mind, feel free to let me know!",beginner,keyword search,Use elasticsearch_search with keyword,manual_q1
+Show me all emails from last month.,"It looks like there are no emails from last month (September 2023) in your inbox. If you need assistance with something else, feel free to ask!",beginner,date-based search,Use elasticsearch_search with date_from parameter for last month,llm_generated
+Find unread emails from my project manager.,"You currently don't have any unread emails from your project manager. If you need help with anything else, just let me know!",beginner,sender + status search,Use elasticsearch_search with sender filter and status filter for unread,llm_generated
+Get me the full conversation with sarah@company.com.,"It looks like there are no emails in the conversation history with sarah@company.com. If you need help with something else or if you want to search for specific topics, just let me know!",intermediate,conversation threading,Use conversation_history tool for complete thread,llm_generated
+Show me emails that have contracts attached.,"I couldn't find any emails with contracts attached in your inbox. If you have other types of documents or need help with something else, feel free to ask!",intermediate,attachment search,Use search_attachments for specific document types,llm_generated
+What emails have the word 'meeting' in them?,"Here are the emails that contain the word ""meeting"":
+
+1. **Sender:** The Google Workspace Team (workspace-noreply@google.com)  
+   **Subject:** Get paid by referring Google Workspace  
+   **Date:** November 22, 2025  
+   **Snippet:** ""Share Workspace and earn rewards...""  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX  
+
+2. **Sender:** Mengi Yay (assist@mengiyay.com)  
+   **Subject:** First Look Inside NB 111 “Cabana” 🌊🛥️✨  
+   **Date:** November 21, 2025  
+   **Snippet:** ""Mengi Yay's First Classic 35m Yacht...""  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD, INBOX  
+
+These emails may contain the relevant information regarding meetings. If you need more details about any specific email or additional actions, just let me know!",beginner,keyword search,Use elasticsearch_search with keyword for 'meeting',llm_generated
+Find all emails sent to my team in the past week.,"It looks like there are no emails sent to your team in the past week. If you need help with something else or have a different timeframe in mind, feel free to ask!",beginner,recipient + date search,Use elasticsearch_search with recipient filter and date range,llm_generated
+Where are the emails containing the word 'proposal' from last quarter?,"It looks like there are no emails containing the word 'proposal' from last quarter (July to September 2023). If you have any other keywords or specifics in mind, feel free to let me know!",intermediate,keyword + date search,Use elasticsearch_search with keyword and date range filter,llm_generated
+Retrieve all conversations related to the 'Project X' email thread.,"I found several conversations related to the ""Project X"" email thread. Here's a summary of the relevant emails:
+
+1. **From:** Chase (no.reply.alerts@chase.com)  
+   **Date:** November 24, 2025  
+   **Subject:** We sent your wire transfer  
+   **Snippet:** ""We sent your wire transfer referenced above, as you requested. If you have questions, please call us at 1-800-935-9935 for personal accounts or 1-800-242-7338 for business accounts.""  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX  
+
+2. **From:** Costco Wholesale (Costco@digital.costco.com)  
+   **Date:** November 21, 2025  
+   **Subject:** Power Up Your Productivity and Save on a New PC!  
+   **Snippet:** ""Featuring Acer, HP, Dell, Microsoft, MSI, Lenovo, ASUS and more.""  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD, INBOX  
+
+3. **From:** Tripadvisor (product@mp1.tripadvisor.com)  
+   **Date:** November 21, 2025  
+   **Subject:** Your November member update  
+   **Snippet:** ""Get the full rundown inside...""  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX  
+
+4. **From:** pdfFiller (noreply@pdffiller.com)  
+   **Date:** November 25, 2025  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Snippet:** ""Your smartest investment this Black Friday...""  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX  
+
+These emails cover various updates and communications, but none specifically mention ""Project X"" in the subject. If you need further details or specific emails regarding ""Project X,"" please let me know!",intermediate,conversation threading,Use conversation_history tool for specific thread based on subject,llm_generated
+Send me the emails with attachments larger than 5MB.,"It looks like I couldn't find any emails with attachments larger than 5MB in your inbox. If you need to look for something else or if you want to try a different search, just let me know!",advanced,attachment size search,Use search_attachments with size filter,llm_generated
+What emails have a high priority flag?,"It looks like there are no emails flagged with high priority in your inbox at the moment. If you need help with anything else, just let me know!",beginner,status search,Use elasticsearch_search with priority filter,llm_generated
+Get me unread emails from all sales team members.,"It looks like you currently have no unread emails from any members of the sales team. If you need assistance with anything else or if you want to check for specific emails, feel free to let me know!",intermediate,sender + status search,Use elasticsearch_search with multiple sender filters and status filter,llm_generated
+Find all emails from clients with the subject 'Feedback'.,"It looks like there are no emails from clients with the subject 'Feedback' in your inbox. If you have any other specific requests or need further assistance, feel free to ask!",beginner,subject + sender search,Use elasticsearch_search with sender filter and subject keyword,llm_generated
+Show me all emails that mention the word 'urgent' sent by my supervisor.,"It looks like there are no emails from your supervisor that mention the word ""urgent."" If you need help with anything else, feel free to ask!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter and keyword,llm_generated
+Retrieve all emails from the past three months that include any attachments.,"It seems there are no emails from the past three months that include any attachments in your inbox. If there's anything else you'd like to check or any specific criteria you'd like to use, just let me know!",intermediate,date + attachment search,Use elasticsearch_search with date range and attachment filter,llm_generated
+What emails did I receive from my CEO last week?,"It looks like you didn't receive any emails from your CEO last week (from October 16 to October 22, 2023). If you have any other questions or need further assistance, feel free to ask!",beginner,sender + date search,Use elasticsearch_search with sender filter and date range,llm_generated
+Find the email attachments related to the budget review.,"It looks like there are no email attachments related to the budget review. If you need help with something else or want to search for emails instead, just let me know!",intermediate,attachment keyword search,Use search_attachments with keyword 'budget review',llm_generated
+Show me emails that are flagged as important but not yet read.,"Here are the emails that are flagged as important and have not yet been read:
+
+1. **From:** pdfFiller <noreply@pdffiller.com>  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** Fri, 21 Nov 2025  
+   **Snippet:** Your smartest investment this Black Friday.
+
+2. **From:** Cathy Wang <sales02@infinitehk.com>  
+   **Subject:** 回覆：wood charger  
+   **Date:** Tue, 18 Nov 2025  
+   **Snippet:** Hello Dear how are you i am Cathy from Shenzhen Infinit Tech factory of wireless charger in Shenzhen China do you want this wood wireless charger?
+
+3. **From:** Askar Admin <askaradmin@em.com>  
+   **Subject:** Invoice from Enterprise Rent-A-Car  
+   **Date:** Tue, 18 Nov 2025  
+   **Snippet:** Attached please find your Enterprise Rent-A-Car invoice. Thank you for your prompt payment.
+
+4. **From:** Zoho Books <support.usa@zohobooks.com>  
+   **Subject:** Important: Your organization, ELECTRA HOLDINGS LTD, in Zoho Books is inactive and scheduled for deletion – Review Now  
+   **Date:** Tue, 11 Nov 2025  
+   **Snippet:** You have an inactive organization, ELECTRA HOLDINGS LTD in Zoho Books.
+
+5. **From:** LinkedIn <security-noreply@linkedin.com>  
+   **Subject:** Jennifer, here's your PIN 452258  
+   **Date:** Mon, 10 Nov 2025  
+   **Snippet:** Please verify it’s you.
+
+6. **From:** Alibaba <feedback@service.alibaba.com>  
+   **Subject:** New seller message on 2025.11.07 07 PM  
+   **Date:** Sat, 8 Nov 2025  
+   **Snippet:** New seller message.
+
+7. **From:** Revolut Business <no-reply@revolut.com>  
+   **Subject:** New — mileage claims, integrations, and more  
+   **Date:** Tue, 04 Nov 2025  
+   **Snippet:** Discover our latest features and products.
+
+8. **From:** WeTransfer <noreply@wetransfer.com>  
+   **Subject:** A transfer you sent is about to expire  
+   **Date:** Fri, 31 Oct 2025  
+   **Snippet:** This transfer will expire on 2 November, 2025.
+
+9. **From:** Intuit QuickBooks <intuit@notices.intuit.com>  
+   **Subject:** Changes to QuickBooks Online Payroll Tax Settings  
+   **Date:** Thu, 23 Oct 2025  
+   **Snippet:** We're making it easier to manage payroll taxes.
+
+10. **From:** Intuit QuickBooks <intuit@notices.intuit.com>  
+    **Subject:** Help keep your Intuit QuickBooks data safe from scams  
+    **Date:** Wed, 15 Oct 2025  
+    **Snippet:** Follow these steps to add extra security to your account.
+
+Let me know if you need any more details or want to take action on any of these emails!",intermediate,status + flag search,Use elasticsearch_search with flag filter and status filter,llm_generated
+List all emails sent to my team during the last company retreat.,"To assist you with that, could you please provide me with the dates of the last company retreat? That will help me narrow down the search for the emails sent to your team during that specific time period.",beginner,recipient + date search,Use elasticsearch_search with recipient filter and date range,llm_generated
+What emails do I have that reference my last vacation?,"I found an email related to your last vacation that was sent by Expedia.com. Here are the details:
+
+- **Sender:** Expedia.com (mail@eg.expedia.com)
+- **Subject:** Black Friday starts now: up to 50% off eligible stays
+- **Date:** November 21, 2025
+- **Snippet:** ""Incredible travel deals are now live—find yours...""
+
+This email appears to promote vacation deals and discounts on hotel stays. It hasn't been read yet and is categorized under Promotions in your inbox.
+
+If you'd like more details or if you're looking for something specific in relation to your vacation, just let me know!",beginner,keyword search,Use elasticsearch_search with keyword for 'vacation',llm_generated
+Get all emails from my accountant regarding the tax documents.,"It looks like there are no emails from your accountant regarding the tax documents. If there’s a different sender or specific keywords you want me to search for, just let me know!",intermediate,sender + subject search,Use elasticsearch_search with sender filter and subject keyword,llm_generated
+Show me emails that contain the word 'feedback' and have attachments.,"It looks like there are no emails containing the word ""feedback"" in your inbox. If you have any other specific requests or keywords you'd like me to search for, feel free to let me know!",intermediate,keyword + attachment search,Use elasticsearch_search with keyword and attachment filter,llm_generated
+Retrieve the last five emails I received from my marketing team.,It looks like I couldn't find any recent emails from your marketing team in your inbox. Would you like me to search for emails from a different sender or perhaps look for specific keywords?,beginner,recipient + limit search,Use elasticsearch_search with recipient filter and limit results,llm_generated
+What emails contain terms related to 'budget' and were sent this month?,"It looks like there are no emails containing the term ""budget"" that were sent this month. If you need help with anything else or want to search for different terms, feel free to let me know!",intermediate,keyword + date search,Use elasticsearch_search with keyword and date range filter,llm_generated
+Show me emails from clients with attachments over 10MB.,"It looks like there are currently no emails with attachments over 10MB from your clients in your inbox. If you have a specific client or date range you'd like me to check, please let me know!",advanced,sender + attachment size search,Use search_attachments with sender filter and size filter,llm_generated
+Find emails that were sent to me but I haven't replied to yet.,"It looks like there are no unread emails in your inbox right now. If you need help with anything else, feel free to ask!",intermediate,reply status + recipient search,Use elasticsearch_search with recipient filter and reply status filter,llm_generated
+What emails have the keyword 'deadline' in the subject line?,"Here are the emails that contain the keyword ""deadline"" in the subject line:
+
+1. **Sender:** MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject:** Job Assigned – Please Review  
+   **Date:** November 21, 2025  
+   **Snippet:** ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""  
+
+2. **Sender:** MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject:** Job Assigned – Please Review  
+   **Date:** November 21, 2025  
+   **Snippet:** ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""  
+
+3. **Sender:** MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject:** Job Assigned – Please Review  
+   **Date:** November 21, 2025  
+   **Snippet:** ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""  
+
+Let me know if you need more details or further assistance!",beginner,subject keyword search,Use elasticsearch_search with subject filter for 'deadline',llm_generated
+Get me the emails sent to the entire department last month.,"I couldn't find any emails that were sent to the entire department last month. It's possible there were none or they were sent under a different subject or wording. If you have more specific criteria or details, I can try searching again!",beginner,recipient + date search,Use elasticsearch_search with recipient filter for department and date range,llm_generated
+Show conversations with my team regarding the annual report.,"It looks like there are no conversations in your inbox with your team regarding the annual report. If you need help with anything else or want to search for specific emails, just let me know!",intermediate,conversation threading,Use conversation_history tool for specific thread based on subject,llm_generated
+Retrieve emails with attachments discussing the new marketing strategy.,"I couldn't find any emails with attachments discussing the new marketing strategy. If you have a different topic in mind or need assistance with something else, just let me know!",intermediate,attachment keyword search,Use search_attachments with keyword 'marketing strategy',llm_generated
+Find unread emails in my promotions folder.,"Here are your unread emails from the Promotions folder:
+
+1. **Enterprise Rent-A-Car**  
+   Subject: Luxury in Motion  
+   Date: Mon, 24 Nov 2025  
+   Snippet: Travel like you mean it. Enterprise Rent Locations Join ...  
+
+2. **The Intuit Connect team**  
+   Subject: Unlock the power of connection with Vanessa Van Edwards  
+   Date: Mon, 24 Nov 2025  
+   Snippet: Join our guest speaker on December 4 for her expert insights ...  
+
+3. **French Eaux**  
+   Subject: 💧 After METSTRADE: French Eaux Opens New Distribution Opportunities  
+   Date: Mon, 24 Nov 2025  
+   Snippet: Purified water on board, together ...  
+
+4. **Tripadvisor**  
+   Subject: 9 jaw-dropping stargazing experiences 🌟  
+   Date: Sun, 23 Nov 2025  
+   Snippet: Plus, underrated European ski towns ...  
+
+5. **Pinterest**  
+   Subject: Drawing for MYS  
+   Date: Sat, 22 Nov 2025  
+   Snippet: “don't beat yourself up” oil painting octopus lady ...  
+
+6. **Sell on Alibaba.com**  
+   Subject: Unlock flexible seller plans exclusive for USA sellers  
+   Date: Sat, 22 Nov 2025  
+   Snippet: Discover the latest solution for SMEs who are ready to expand globally ...  
+
+7. **Pinterest**  
+   Subject: Drawing for MYS  
+   Date: Fri, 21 Nov 2025  
+   Snippet: “don't beat yourself up” oil painting Cake Aisle ...  
+
+8. **Costco Wholesale**  
+   Subject: Power Up Your Productivity and Save on a New PC!  
+   Date: Fri, 21 Nov 2025  
+   Snippet: Featuring Acer, HP, Dell, Microsoft ...  
+
+9. **Enterprise Rent-A-Car**  
+   Subject: SUV + Great Rates = Road Trip 😍  
+   Date: Fri, 21 Nov 2025  
+   Snippet: Start planning today. Enterprise Rent Locations Join ...  
+
+10. **Costco Wholesale**  
+    Subject: Your Winter Upgrade: From Closet to Kitchen.  
+    Date: Fri, 21 Nov 2025  
+    Snippet: Bundle Up in Style and Save Big with Samsung Holiday Savings ...  
+
+Let me know if you need any assistance with these emails!",beginner,folder + status search,Use elasticsearch_search with folder filter for promotions and status filter,llm_generated
+What emails did I receive from my vendor last quarter with attachments?,"It looks like there were no emails received from your vendor during last quarter that contained attachments. If you need help with something else or want to search for a different timeframe or sender, just let me know!",intermediate,sender + date + attachment search,"Use elasticsearch_search with sender filter, date range, and attachment filter",llm_generated
+Show me emails where I was cc'd on the conversation last week.,"It looks like there were no emails where you were CC'd in the conversation last week. If you have any other specific criteria or if you want to search for something else, feel free to let me know!",beginner,cc + date search,Use elasticsearch_search with cc filter and date range,llm_generated
+Find all emails mentioning 'team building' with any attachments.,"I couldn't find any emails mentioning ""team building"" that have attachments. If you need further assistance or want to check for emails without attachments, just let me know!",intermediate,keyword + attachment search,Use elasticsearch_search with keyword 'team building' and attachment filter,llm_generated
+Can you show me all my unread emails from last month?,"It looks like you don't have any unread emails from last month. If you need help with anything else, feel free to ask!",beginner,date + status search,Use elasticsearch_search with date_from and status filters,llm_generated
+What emails did I receive about the last team meeting?,"I found several emails related to the last team meeting. Here are some of the most relevant results:
+
+1. **From Jennifer Malone**  
+   **Date:** November 24, 2025  
+   **Subject:** Automatic reply: test  
+   **Snippet:** 
+   Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period:  
+   - Wednesday, November 26 – Our office will operate on a half-day schedule (Closing @ Noon).  
+   - Thursday, November 27 – Sunday, November 30 – Our office will be closed.  
+   - Monday, December 1 – Normal business operations will resume.  
+
+2. **From MYS USA TATI**  
+   **Date:** November 24, 2025  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Snippet:** 
+   Hi all, Please paste the following message as your automated email response from today through Wednesday. A second message will be sent later this week, which we will update to reflect the holiday office closure.  
+
+3. **From Adobe Special Offers**  
+   **Date:** November 24, 2025  
+   **Subject:** Don't miss this Black Friday deal  
+   **Snippet:** 
+   Offer ends soon. Save 50% on Creative Cloud Pro for teams.  
+
+4. **From Pinterest**  
+   **Date:** November 22, 2025  
+   **Subject:** Drawing for MYS  
+   **Snippet:** 
+   ""don’t beat yourself up"" oil painting octopus lady by skirua vintage nintendo ads...  
+
+It seems that the emails do not directly reference the specifics of the last team meeting, but they do include communications relating to scheduling and holiday hours that may affect team meetings. If you need more specific details or additional emails, let me know!",beginner,keyword + date search,Use elasticsearch_search with keyword and date filters,llm_generated
+Show me emails that include the word 'project' but are not from my manager.,"It seems there are no emails that include the word ""project"" from your manager. Now, let me search for all emails that include the word ""project"" regardless of the sender. One moment, please.",intermediate,keyword + sender filter,Use elasticsearch_search with keyword and sender filter,llm_generated
+Find any emails from HR that contain attachments.,"I couldn't find any emails from HR that contain attachments in your inbox. If you have any other specific requests or need to search differently, feel free to let me know!",intermediate,attachment + sender search,Use elasticsearch_search with sender filter and search_attachments,llm_generated
+What was the last email I received from my client?,It looks like I couldn't find any emails from your client in your inbox. Could you please double-check the email address or provide more details?,beginner,sender + date search,Use elasticsearch_search with date sorting and sender filter,llm_generated
+Can I see the latest email threads with the marketing team?,"It looks like there are no recent email threads with the marketing team. If you need to check further or if there's something specific you're looking for, just let me know!",intermediate,conversation threading,Use conversation_history tool with sender filter,llm_generated
+Show me all emails that include a presentation file.,"It looks like there are no emails in your inbox that include a presentation file. If you're looking for something specific, let me know!",beginner,attachment search,Use search_attachments for presentation file types,llm_generated
+What emails have been sent to me that mention 'deadline'?,"I found several emails that mention the term ""deadline"":
+
+1. **From**: MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject**: Job Assigned – Please Review  
+   **Date**: November 21, 2025  
+   **Snippet**: ""A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""
+
+2. **From**: MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject**: Job Assigned – Please Review  
+   **Date**: November 21, 2025  
+   **Snippet**: ""A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""
+
+3. **From**: MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject**: Job Assigned – Please Review  
+   **Date**: November 21, 2025  
+   **Snippet**: ""A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""
+
+Each of these emails contains similar content regarding a new job assignment with an emphasis on completing the task by the deadline. If you need more details or would like to see the full email, just let me know!",beginner,keyword search,Use elasticsearch_search with keyword filter,llm_generated
+Can you find all emails from last week that are flagged?,"It looks like there are no flagged emails from last week (October 2nd to October 8th, 2023) in your inbox. If you need help with anything else, feel free to ask!",intermediate,date + status search,Use elasticsearch_search with date and status filters,llm_generated
+Find emails with attachments that mention 'contract'.,"I couldn't find any emails with attachments that mention ""contract."" If you have a different keyword or would like me to search for something else, just let me know!",intermediate,attachment + keyword search,Use elasticsearch_search with keyword filter and search_attachments,llm_generated
+Show me emails from the last three days that are still unread.,"Here are the unread emails from the last three days:
+
+1. **From:** pdfFiller <noreply@pdffiller.com>  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** Tue, 25 Nov 2025 06:21:26 +0000  
+   **Snippet:** Your smartest investment this Black Friday.
+
+2. **From:** Enterprise Rent-A-Car <Enterprise-Rent-A-Car@email.enterprise.com>  
+   **Subject:** Luxury in Motion  
+   **Date:** Mon, 24 Nov 2025 15:02:49 -0600  
+   **Snippet:** Travel like you mean it. Enterprise Rent Locations Join...
+
+3. **From:** Alibaba Remind <remind@notice.alibaba.com>  
+   **Subject:** 📈 sublimation wireless charger: update with the latest trends  
+   **Date:** Mon, 24 Nov 2025 12:15:19 -0800 (PST)  
+   **Snippet:** Over 1 Million Users Were Searching for These Keywords yesterday...
+
+4. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Unlock the power of connection with Vanessa Van Edwards  
+   **Date:** Mon, 24 Nov 2025 13:42:11 -0600 (CST)  
+   **Snippet:** Join our guest speaker on December 4 for her expert insights...
+
+5. **From:** Chase <no.reply.alerts@chase.com>  
+   **Subject:** Important Business Banking Alert  
+   **Date:** Mon, 24 Nov 2025 18:01:29 +0000 (UTC)  
+   **Snippet:** Dear Customer, At Chase, we're committed to providing the tools...
+
+6. **From:** French Eaux <my@newsletter.frencheaux.com>  
+   **Subject:** 💧 After METSTRADE: French Eaux Opens New Distribution Opportunities  
+   **Date:** Mon, 24 Nov 2025 15:52:13 +0000 (UTC)  
+   **Snippet:** Purified water on board, together.
+
+7. **From:** Chase <no.reply.alerts@chase.com>  
+   **Subject:** We sent your wire transfer  
+   **Date:** Mon, 24 Nov 2025 14:32:01 +0000 (UTC)  
+   **Snippet:** From Account Ending in 9975 Transaction Number: 12041584932...
+
+8. **From:** Tripadvisor <inspiration@mp1.tripadvisor.com>  
+   **Subject:** 9 jaw-dropping stargazing experiences 🌌  
+   **Date:** Sun, 23 Nov 2025 17:24:55 +0000  
+   **Snippet:** Plus, underrated European ski towns...
+
+9. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+   **Subject:** Get paid by referring Google Workspace  
+   **Date:** Sat, 22 Nov 2025 17:30:34 -0800  
+   **Snippet:** Share Workspace and earn rewards.
+
+10. **From:** Pinterest <recommendations@explore.pinterest.com>  
+    **Subject:** Drawing for MYS  
+    **Date:** Sat, 22 Nov 2025 22:33:48 +0000  
+    **Snippet:** “don’t beat yourself up” oil painting octopus lady...
+
+Let me know if you need more information about any of these emails!",beginner,date + status search,Use elasticsearch_search with date and status filters,llm_generated
+What emails have attachments larger than 5MB?,"It looks like there are currently no emails with attachments larger than 5MB in your inbox. If you have any other specific requests or need further assistance, feel free to ask!",advanced,attachment size search,Use search_attachments with size filter,llm_generated
+Can you summarize the conversation history with alice@company.com?,"It appears there is no conversation history with alice@company.com. There are no emails sent or received in the records. If you need assistance with anything else, feel free to ask!",intermediate,conversation threading,Use conversation_history tool for complete thread,llm_generated
+Find all emails from suppliers that mention 'quote'.,"It looks like I couldn't find any emails from suppliers that mention the word ""quote."" If you're looking for something specific or have another keyword in mind, let me know, and I can help you refine the search!",intermediate,keyword + sender filter,Use elasticsearch_search with sender filter and keyword search,llm_generated
+What were the last five emails I received this morning?,It seems that there are no emails in your inbox from this morning. Would you like me to check for unread emails or perhaps look for emails from a specific sender?,beginner,date search,Use elasticsearch_search with date sorting and limit,llm_generated
+Show me emails that contain 'feedback' and are marked as important.,"It looks like there are no emails that contain the word ""feedback"" and are marked as important in your inbox. If you have any other criteria or need assistance with something else, feel free to let me know!",intermediate,keyword + status search,Use elasticsearch_search with keyword and status filters,llm_generated
+Can you find all emails that have a PDF attachment?,"It looks like I was unable to find any emails with PDF attachments in your inbox based on the search conducted. If you want to look for emails with attachments of a different type or have specific criteria in mind, please let me know!",beginner,attachment search,Use search_attachments for PDF files,llm_generated
+What conversations include emails from tech_support@company.com?,"It looks like there are no conversations that include emails from tech_support@company.com in your inbox. If you need help with anything else, feel free to ask!",intermediate,conversation threading,Use conversation_history tool with sender filter,llm_generated
+Show me emails that were sent during the last two weeks that are flagged.,"It looks like there are no flagged emails sent during the last two weeks. If you need help with anything else, feel free to ask!",intermediate,date + status search,Use elasticsearch_search with date and status filters,llm_generated
+What were the last five emails I sent to my team?,"It looks like there are currently no recent emails sent from your address to your team in the system. If you have a specific email or topic in mind, please let me know, and I can help you search for that!",beginner,sender search,Use elasticsearch_search with sender filter and date sorting,llm_generated
+Can you show me emails that discuss 'budget' and are from my finance team?,"It looks like there are no emails discussing 'budget' from your finance team in your inbox. If you have any other keywords or specific senders in mind, feel free to let me know!",intermediate,keyword + sender filter,Use elasticsearch_search with keyword and sender filters,llm_generated
+Find any emails that have images attached.,"It looks like there are currently no emails in your inbox with images attached. If you're looking for something specific, let me know, and I can help you with that!",beginner,attachment search,Use search_attachments for image file types,llm_generated
+Show me my unread emails from last quarter.,"You currently don't have any unread emails from last quarter. If there's anything else you need, feel free to ask!",beginner,date + status search,Use elasticsearch_search with date and status filters,llm_generated
+What emails mention 'holiday' and were sent by my supervisor?,"It looks like there are no emails from your supervisor that mention the word ""holiday."" If you need help with something else or have a different request, just let me know!",intermediate,keyword + sender filter,Use elasticsearch_search with keyword and sender filters,llm_generated
+Can you show me emails that include 'meeting notes' over the past month?,"It looks like there are no emails that include the phrase ""meeting notes"" over the past month. If you have any other specific keywords or time frames you want to check, just let me know!",beginner,keyword + date search,Use elasticsearch_search with keyword and date filters,llm_generated
+Find all email threads I've had with support@company.com.,"It looks like there are no email threads in your inbox with support@company.com. If you need help with something specific, feel free to ask!",intermediate,conversation threading,Use conversation_history tool with sender filter,llm_generated
+What emails were sent to me after 5 PM yesterday?,"Here are the emails that were sent to you after 5 PM yesterday:
+
+1. **From:** pdfFiller (noreply@pdffiller.com)  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** November 25, 2025, 6:21 PM (UTC)  
+   **Snippet:** Your smartest investment this Black Friday.
+
+2. **From:** Chase (no.reply.alerts@chase.com)  
+   **Subject:** Important Business Banking Alert  
+   **Date:** November 24, 2025, 6:01 PM (UTC)  
+   **Snippet:** At Chase, we're committed to providing the tools you need to help you monitor your account(s). Below is a list of the latest transactions for the accounts in your profile.
+
+3. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025, 5:55 PM (UTC)  
+   **Snippet:** Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period.
+
+4. **From:** MYS USA ACCOUNTING (florida@mysusainc.com)  
+   **Subject:** test 3  
+   **Date:** November 24, 2025, 5:55 PM (UTC)  
+
+5. **From:** MYS USA ACCOUNTING (florida@mysusainc.com)  
+   **Subject:** Re: test ii  
+   **Date:** November 24, 2025, 5:48 PM (UTC)  
+   **Snippet:** From: MYS USA ACCOUNTING <florida@mysusainc.com> Sent: Monday, November 24, 2025 12:44 PM
+
+If you need more details or wish to take any actions on these emails, just let me know!",advanced,date + time search,Use elasticsearch_search with date and time filters,llm_generated
+Show me emails with the keyword 'urgent' that are older than a month.,"Here are some emails containing the keyword ""urgent"" that are older than a month:
+
+1. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL
+
+2. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL
+
+3. **From:** Scot Fraser (sfraser@camperandnicholsons.com)  
+   **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** ""For any urgent matters, you can reach me on my mobile directly.""  
+   **Labels:** CATEGORY_PERSONAL
+
+4. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL
+
+5. **From:** Enterprise Rent-A-Car (Enterprise-Rent-A-Car@email.enterprise.com)  
+   **Subject:** Luxury in Motion  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Travel like you mean it. Enterprise Rent Locations Join When your destination is stunning your ride should be, too.""  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD
+
+If you need more details about any specific email or wish to perform another action, just let me know!",intermediate,keyword + date search,Use elasticsearch_search with keyword and date filters,llm_generated
+Can you retrieve all emails that are marked as spam?,"Unfortunately, I don't have the capability to directly access or retrieve emails that are marked as spam. I can assist you with other email-related tasks, such as fetching unread emails or searching for specific emails in your inbox. If you have any other requests or need help with something else, feel free to let me know!",advanced,status search,Use elasticsearch_search with spam filter,llm_generated
+What emails contain the word 'revised' and were sent in the last week?,"Here are the emails containing the word ""revised"" that were sent in the last week:
+
+1. **Sender**: MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject**: Job Assigned – Please Review  
+   **Snippet**: ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""  
+   **Date**: November 21, 2025  
+   **Labels**: IMPORTANT, CATEGORY_PERSONAL, INBOX  
+
+2. **Sender**: MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject**: Job Assigned – Please Review  
+   **Snippet**: ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""  
+   **Date**: November 21, 2025  
+   **Labels**: IMPORTANT, CATEGORY_PERSONAL, INBOX  
+
+3. **Sender**: MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject**: Job Assigned – Please Review  
+   **Snippet**: ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.""  
+   **Date**: November 21, 2025  
+   **Labels**: YELLOW_STAR, IMPORTANT, STARRED, CATEGORY_UPDATES, INBOX  
+
+It seems there are multiple emails regarding job assignments sent on the same date. Please let me know if you need more details about any specific email!",beginner,keyword + date search,Use elasticsearch_search with keyword and date filters,llm_generated
+Can you summarize the latest emails from my project team?,"It looks like there are no recent emails from your project team. If you have another sender in mind or need to check a different folder, let me know!",intermediate,conversation threading,Use conversation_history tool with sender filter,llm_generated
+Can you show me all emails I received last month?,"It looks like there are no emails from last month in your inbox. If you believe this might be incorrect or if you have any specific dates or senders in mind, please let me know, and I can assist you further!",beginner,date-based search,Use elasticsearch_search with date_from and date_to parameters,llm_generated
+What unread emails have attachments?,"Here are your unread emails that have attachments:
+
+1. **From:** askaradmin@em.com  
+   **Subject:** Invoice from Enterprise Rent-A-Car  
+   **Date:** Tue, 18 Nov 2025  
+   **Snippet:** Attached please find your Enterprise Rent-A-Car invoice. Thank you for your prompt payment.  
+   **Labels:** UNREAD, IMPORTANT, CATEGORY_UPDATES, INBOX
+
+2. **From:** Google Payments <payments-noreply@google.com>  
+   **Subject:** Google Workspace: Your invoice is available for mysusainc.com  
+   **Date:** Sat, 01 Nov 2025  
+   **Snippet:** Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+3. **From:** Google Payments <payments-noreply@google.com>  
+   **Subject:** Google Workspace: Your invoice is available for mysusainc.com  
+   **Date:** Thu, 02 Oct 2025  
+   **Snippet:** Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+4. **From:** Google Payments <payments-noreply@google.com>  
+   **Subject:** Google Workspace: Your invoice is available for mysusainc.com  
+   **Date:** Mon, 01 Sep 2025  
+   **Snippet:** Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+5. **From:** Jack Dunkenberger <jack@gabrielahearst.com>  
+   **Subject:** Re: PRIVACY & DATA CONSENT FORM  
+   **Date:** Tue, 27 Jun 2023  
+   **Snippet:** Please find the attached consent form.  
+   **Labels:** UNREAD
+
+If you need help with any specific emails or attachments, feel free to ask!",beginner,status + attachment search,Use elasticsearch_search with status filter and attachment presence,llm_generated
+Find emails from my project team that are older than three weeks.,"It seems there are no emails from your project team that are older than three weeks in your inbox. If you have any other specific emails or topics in mind, feel free to let me know!",intermediate,sender + date search,Use elasticsearch_search with sender filter and date_from parameter,llm_generated
+Show me all emails that contain meeting notes.,"Here are the emails that contain mentions of ""meeting notes"":
+
+1. **From:** Pauline Le Thiec (plethiec@camperandnicholsons.com)
+   - **Subject:** RE: MYS USA - Inv. 2025-002LH - USD 5,130.78
+   - **Date:** November 24, 2025
+   - **Snippet:** ""Good morning, Thank you for your email, this is duly noted. Kind regards, Pauline Le Thiec Yacht Accountant""
+   - **Attachments:** 3 images
+
+2. **From:** Scot Fraser (sfraser@camperandnicholsons.com)
+   - **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78
+   - **Date:** November 24, 2025
+   - **Snippet:** ""Dear Sender, I am currently out of the office. I will be back in the office on Monday 8th December...""
+   - **Attachments:** None
+
+3. **From:** The Google Workspace Team (workspace-noreply@google.com)
+   - **Subject:** Get paid by referring Google Workspace
+   - **Date:** November 22, 2025
+   - **Snippet:** ""Share Workspace and earn rewards...""
+   - **Attachments:** None
+
+4. **From:** MYS USA INC (no-reply@yachtlogicpro.com)
+   - **Subject:** Job Assigned – Please Review
+   - **Date:** November 21, 2025
+   - **Snippet:** ""Hello ASIA AMODEO, A new job has been assigned to you...""
+   - **Attachments:** None
+
+5. **From:** MENGI YAY (assist@mengiyay.com)
+   - **Subject:** First Look Inside NB 111 “Cabana”
+   - **Date:** November 21, 2025
+   - **Snippet:** ""Mengi Yay's First Classic 35m Yacht...""
+   - **Attachments:** None
+
+If you need more details about any particular email or further actions, just let me know!",intermediate,attachment search,Use search_attachments for keyword in document content,llm_generated
+What emails did I send last week?,"It looks like you didn't send any emails last week (from October 9 to October 15). If you need information from a different time period or have any other questions, just let me know!",beginner,date-based search,Use elasticsearch_search with date_from parameter for sent items,llm_generated
+Find emails from my HR department that are unread.,"It looks like there are no unread emails from your HR department in your inbox. If you have any other specific requests or need assistance with something else, feel free to ask!",beginner,sender + status search,Use elasticsearch_search with sender filter and status filter,llm_generated
+Show me the entire conversation thread with alice@company.com.,"It looks like there are no emails in the conversation thread with alice@company.com. If you need help with anything else or a different email thread, just let me know!",intermediate,conversation threading,Use conversation_history tool for all messages from that sender,llm_generated
+What emails do I have related to the marketing strategy?,"Here are some emails related to your marketing strategy:
+
+1. **From:** pdfFiller (noreply@pdffiller.com)
+   - **Subject:** Forget the deals. Invest in productivity.
+   - **Date:** November 25, 2025
+   - **Snippet:** Your smartest investment this Black Friday.
+
+2. **From:** Adobe Special Offers (mail@mail.adobe.com)
+   - **Subject:** Don't miss this Black Friday deal
+   - **Date:** November 24, 2025
+   - **Snippet:** Offer ends soon. Save 50% on Creative Cloud Pro for teams.
+
+3. **From:** Chase (no.reply.alerts@chase.com)
+   - **Subject:** We sent your wire transfer
+   - **Date:** November 24, 2025
+   - **Snippet:** From Account Ending in 9975. Transaction Number: 12041584932.
+
+4. **From:** Elevate by monday.com (team@learn.mail.monday.com)
+   - **Subject:** AI that knows your work — and does it for you
+   - **Date:** November 24, 2025
+   - **Snippet:** Exclusive access to monday.com's most advanced AI capabilities.
+
+5. **From:** Pinterest (recommendations@explore.pinterest.com)
+   - **Subject:** Drawing for MYS
+   - **Date:** November 22, 2025
+   - **Snippet:** Don’t beat yourself up software ads & more...
+
+6. **More from MYS USA INC:**
+   - **Subject:** Job Assigned – Please Review
+   - **Date:** November 21, 2025
+   - **Snippet:** A new job has been assigned to you. Please review the details.
+
+Most of these messages contain promotional content or updates related to marketing tools and services you might be using. Let me know if you need more details on any specific email!",beginner,keyword search,Use elasticsearch_search with keyword 'marketing strategy',llm_generated
+Can you find all emails containing client feedback?,"I found some recent emails, but they don't seem to contain any actual client feedback. Instead, they appear to be promotional emails from Adobe. Here are the details:
+
+1. **Subject**: Don't miss this Black Friday deal  
+   **Sender**: Adobe Special Offers (mail@mail.adobe.com)  
+   **Date**: November 24, 2025  
+   **Snippet**: Offer ends soon. Save 50% on Creative Cloud Pro for teams.  
+   **Labels**: Promotions, Inbox  
+
+2. **Subject**: Save 50% with this Black Friday offer  
+   **Sender**: Adobe Special Offers (mail@mail.adobe.com)  
+   **Date**: November 21, 2025  
+   **Snippet**: Don't miss this deal on Creative Cloud Pro for teams.  
+   **Labels**: Promotions, Unread, Inbox  
+
+If you're looking for specific feedback from clients, could you provide me with more details or keywords you think might help narrow it down?",beginner,keyword search,Use elasticsearch_search with keyword filter,llm_generated
+List unread emails from my last conference.,"It looks like there are no unread emails from your last conference in your inbox. If you need help with anything else or want to search for emails differently, just let me know!",intermediate,category + status search,Use elasticsearch_search with category filter and status filter,llm_generated
+Show me emails that have the word 'urgent' or 'important'.,"Here are the recent emails that contain the words ""urgent"" or ""important"":
+
+### Emails with ""Urgent"":
+1. **Sender:** **Jennifer Malone** (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** ""We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period... A member of our team will address any urgent matters promptly.""
+
+2. **Sender:** **Jennifer Malone** (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""
+
+3. **Sender:** **Scot Fraser** (sfraser@camperandnicholsons.com)  
+   **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** ""For any urgent matters, you can reach me on my mobile directly.""
+
+### Emails with ""Important"":
+1. **Sender:** **Chase** (no.reply.alerts@chase.com)  
+   **Subject:** Important Business Banking Alert  
+   **Date:** November 24, 2025  
+   **Snippet:** ""At Chase, we're committed to providing the tools you need to help you monitor your account(s). Below is a list of the latest transactions...""
+
+2. **Sender:** **Chase** (no.reply.alerts@chase.com)  
+   **Subject:** We sent your wire transfer  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Dear Customer: We sent your wire transfer referenced above, as you requested. If you have questions, please call us...""
+
+3. **Sender:** **Alibaba Remind** (remind@notice.alibaba.com)  
+   **Subject:** You have 14 unread messages from Alibaba.com  
+   **Date:** November 23, 2025  
+   **Snippet:** ""You have 14 unread messages from Alibaba.com View and reply now to don’t miss important business opportunities.""
+
+If you'd like to view more details about a specific email or need anything else, just let me know!",intermediate,keyword search,Use elasticsearch_search with multiple keyword filters,llm_generated
+What emails have been flagged for follow-up?,"Here are some emails that have been flagged for follow-up:
+
+1. **From:** pdfFiller (noreply@pdffiller.com)  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** November 25, 2025  
+   **Snippet:** Your smartest investment this Black Friday.
+
+2. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** Please paste the following message as your automated email response...
+
+3. **From:** Tripadvisor (inspiration@mp1.tripadvisor.com)  
+   **Subject:** 9 jaw-dropping stargazing experiences 🌌  
+   **Date:** November 23, 2025  
+   **Snippet:** Plus, underrated European ski towns…
+
+4. **From:** The Google Workspace Team (workspace-noreply@google.com)  
+   **Subject:** Get paid by referring Google Workspace  
+   **Date:** November 22, 2025  
+   **Snippet:** Share Workspace and earn rewards.
+
+5. **From:** Pinterest (recommendations@explore.pinterest.com)  
+   **Subject:** Drawing for MYS  
+   **Date:** November 22, 2025  
+   **Snippet:** “don’t beat yourself up” oil painting octopus lady...
+
+These emails may require your attention or action. Let me know if you need more details on any specific email!",beginner,status search,Use elasticsearch_search with flagged status,llm_generated
+Find all emails with attachments over 5MB.,"It seems that I was unable to find any emails that contain attachments larger than 5MB in your inbox. Most of the emails fetched do not have any attachments at all.
+
+If you have a specific email or sender in mind that you think might have attachments, let me know, and I can search for that!",advanced,attachment search,Use search_attachments with filter for size,llm_generated
+Show me emails I received from my manager and are marked as important.,"It looks like there are no emails from your manager that are marked as important in your inbox. If you want to check for any other categories or specific dates, just let me know!",intermediate,sender + status search,Use elasticsearch_search with sender filter and status filter,llm_generated
+What emails were sent to the entire department last week?,"It looks like there were no emails sent to the entire department last week. If there's anything specific you would like to check or if you have a different timeframe in mind, just let me know!",intermediate,recipient + date search,Use elasticsearch_search with recipient filter for department and date_from,llm_generated
+List all emails sent by me that mention project deadlines.,"It looks like there are no emails sent by you that mention project deadlines. If you have any other specific keywords or topics in mind, feel free to let me know, and I can help you search for those!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter and keyword filter,llm_generated
+Can you find emails with images attached?,"It looks like there are currently no emails in your inbox that have attachments, including images. If you need help with anything else or want to search for something specific, feel free to ask!",intermediate,attachment search,Use search_attachments with filter for image file types,llm_generated
+Show me all emails from vendors that have invoices attached.,"It looks like there are currently no emails with invoices attached from vendors in your inbox. If you need help with something else or want to look for different types of emails, just let me know!",advanced,sender + attachment search,Use elasticsearch_search with sender filter and attachment filter,llm_generated
+What emails do I have flagged from this month?,"It looks like there are no flagged emails in your inbox for this month, October 2023. If you need help with anything else or want to look for different emails, just let me know!",beginner,status + date search,Use elasticsearch_search with flagged status and date filter,llm_generated
+Find all emails from the last quarter that mention 'budget cuts'.,"It looks like there are no emails from the last quarter that mention ""budget cuts."" If you have any other keywords or specific time periods in mind, let me know!",intermediate,date + keyword search,Use elasticsearch_search with date range and keyword filter,llm_generated
+Show me the conversation history with a specific client over the past year.,Could you please provide me with the email address of the specific client whose conversation history you would like to see?,advanced,conversation threading,Use conversation_history tool with date range filter,llm_generated
+What are all the emails I've sent that are still unanswered?,"It looks like there are no emails you've sent that are still unanswered or marked as unread. If you need help with anything else, feel free to ask!",intermediate,sender + status search,Use elasticsearch_search with sender filter and unanswered status,llm_generated
+Can you show me emails containing project updates?,"Here are some emails that contain mentions of project updates:
+
+1. **From:** pdfFiller (noreply@pdffiller.com)  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** November 25, 2025  
+   **Snippet:** Your smartest investment this Black Friday.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+2. **From:** Alibaba Remind (remind@notice.alibaba.com)  
+   **Subject:** 📈 sublimation wireless charger: update with the latest trends  
+   **Date:** November 24, 2025  
+   **Snippet:** Over 1 Million Users Were Searching for These Keywords yesterday, 50%+ Search Growth!  
+   **Labels:** UNREAD, CATEGORY_PERSONAL, INBOX
+
+3. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** Hi all, Please paste the following message as your automated email response...  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX
+
+4. **From:** Chase (no.reply.alerts@chase.com)  
+   **Subject:** We sent your wire transfer  
+   **Date:** November 24, 2025  
+   **Snippet:** From Account Ending in 9975 Transaction Number : 12041584932 Dear Customer...  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+5. **From:** Costco Wholesale (Costco@digital.costco.com)  
+   **Subject:** Power Up Your Productivity and Save on a New PC!  
+   **Date:** November 21, 2025  
+   **Snippet:** Featuring Acer, HP, Dell, Microsoft, MSI, Lenovo, ASUS and more.  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD, INBOX
+
+6. **From:** Tripadvisor (product@mp1.tripadvisor.com)  
+   **Subject:** Your November member update  
+   **Date:** November 21, 2025  
+   **Snippet:** Get the full rundown inside...  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+If you need details from any specific email or want to read more about a particular project, just let me know!",beginner,keyword search,Use elasticsearch_search with keyword filter for project updates,llm_generated
+Find emails that have both 'meeting' and 'confirmation' in the subject.,"I couldn't find any emails with both ""meeting"" and ""confirmation"" in the subject line. If you have any other queries or need help with different search terms, feel free to ask!",intermediate,keyword search,Use elasticsearch_search with multiple keyword filters for subject,llm_generated
+What emails did I receive from last week that are marked as important?,"It looks like there were no emails marked as important that you received last week (from October 9 to October 15, 2023). If you need help with anything else, feel free to ask!",intermediate,date + status search,Use elasticsearch_search with date_from and status filter,llm_generated
+Show me emails with feedback from our last project.,"It looks like I couldn't find any emails with ""feedback"" related to your last project. If you have any specific senders or subjects in mind, please let me know, and I can try searching that way!",beginner,keyword search,Use elasticsearch_search with keyword filter for feedback,llm_generated
+What emails have attachments that are Word documents?,"It looks like there are no emails in your inbox that have Word document attachments. If you have any other specific requests or need help with something else, feel free to ask!",intermediate,attachment search,Use search_attachments with filter for Word file types,llm_generated
+List all emails I received this week regarding budget meetings.,"It looks like there were no emails regarding budget meetings that you received this week. If you need help with anything else or want to refine your search, just let me know!",intermediate,date + keyword search,Use elasticsearch_search with date_from and keyword filter,llm_generated
+Can you find all emails from our supplier that discuss delivery delays?,"It seems that there are no emails from our supplier specifically discussing delivery delays in your inbox. If you would like, I can broaden the search or check for other related keywords. Let me know how you’d like to proceed!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter and keyword filter,llm_generated
+Show me the emails flagged for follow-up that are older than three months.,"Here are the emails flagged for follow-up that are older than three months:
+
+1. **From**: pdfFiller (noreply@pdffiller.com)
+   - **To**: florida@mysusainc.com
+   - **Date**: November 25, 2025
+   - **Subject**: Forget the deals. Invest in productivity.
+   - **Snippet**: Your smartest investment this Black Friday.
+
+2. **From**: MYS USA TATI (operations@mysusainc.com)
+   - **To**: Multiple recipients including Jennifer Malone
+   - **Date**: November 24, 2025
+   - **Subject**: Thanksgiving Holiday Office Hours – MYS USA INC
+   - **Snippet**: Please paste the following message as your automated email response from today through Wednesday.
+
+3. **From**: Tripadvisor (inspiration@mp1.tripadvisor.com)
+   - **To**: florida@mysusainc.com
+   - **Date**: November 23, 2025
+   - **Subject**: 9 jaw-dropping stargazing experiences 🌟
+   - **Snippet**: Plus, underrated European ski towns.
+
+4. **From**: The Google Workspace Team (workspace-noreply@google.com)
+   - **To**: florida@mysusainc.com
+   - **Date**: November 22, 2025
+   - **Subject**: Get paid by referring Google Workspace
+   - **Snippet**: Share Workspace and earn rewards.
+
+5. **From**: Pinterest (recommendations@explore.pinterest.com)
+   - **To**: MYS USA <florida@mysusainc.com>
+   - **Date**: November 22, 2025
+   - **Subject**: Drawing for MYS
+   - **Snippet**: ""don't beat yourself up” oil painting octopus lady by skirua vintage nintendo ads.
+
+6. **From**: Costco Wholesale (Costco@digital.costco.com)
+   - **To**: florida@mysusainc.com
+   - **Date**: November 21, 2025
+   - **Subject**: Your Winter Upgrade: From Closet to Kitchen.
+   - **Snippet**: Bundle Up in Style and Save Big with Samsung Holiday Savings.
+
+If you need detailed information about any specific email or want to take action on them, just let me know!",advanced,status + date search,Use elasticsearch_search with flagged status and date_from filter,llm_generated
+What are all the emails I sent this month that are marked as 'urgent'?,"It looks like there are no emails marked as 'urgent' that you sent this month. If you need help with anything else, feel free to ask!",beginner,sender + status search,Use elasticsearch_search with sender filter and status filter,llm_generated
+Find all emails with the word 'contract' in the subject or body.,"Here are the emails I found containing the word ""contract"" in either the subject or body:
+
+1. **Sender:** pdfFiller (noreply@pdffiller.com)  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** November 25, 2025  
+   **Snippet:** Your smartest investment this Black Friday...
+
+2. **Sender:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** Thank you for contacting MYS USA INC...
+
+3. **Sender:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** Thank you for contacting MYS USA INC...
+
+4. **Sender:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** Hi all, Please paste the following message as your automated email response...
+
+5. **Sender:** Adobe Special Offers (mail@mail.adobe.com)  
+   **Subject:** Don't miss this Black Friday deal  
+   **Date:** November 24, 2025  
+   **Snippet:** Offer ends soon. Save 50% on Creative Cloud Pro for teams...
+
+6. **Sender:** French Eaux (my@newsletter.frencheaux.com)  
+   **Subject:** 💧 After METSTRADE: French Eaux Opens New Distribution Opportunities  
+   **Date:** November 24, 2025  
+   **Snippet:** Purified water on board, together...
+
+7. **Sender:** Chase (no.reply.alerts@chase.com)  
+   **Subject:** We sent your wire transfer  
+   **Date:** November 24, 2025  
+   **Snippet:** From Account Ending in 9975 Transaction Number : 12041584932 Dear Customer...
+
+8. **Sender:** Scot Fraser (sfraser@camperandnicholsons.com)  
+   **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** Dear Sender, I am currently out of the office...
+
+9. **Sender:** Tripadvisor (inspiration@mp1.tripadvisor.com)  
+   **Subject:** 9 jaw-dropping stargazing experiences 🌌  
+   **Date:** November 23, 2025  
+   **Snippet:** Plus, underrated European ski towns...
+
+10. **Sender:** The Google Workspace Team (workspace-noreply@google.com)  
+    **Subject:** Get paid by referring Google Workspace  
+    **Date:** November 22, 2025  
+    **Snippet:** Earn rewards by referring Google Workspace...
+
+If you need further details or actions on any specific emails, just let me know!",intermediate,keyword search,Use elasticsearch_search with keyword filter for subject and body,llm_generated
+Show me emails regarding the annual report discussion.,"Here are some emails regarding the discussion about the annual report:
+
+1. **Sender:** Chase (no.reply.alerts@chase.com)  
+   **Date:** November 24, 2025  
+   **Subject:** Important Business Banking Alert  
+   **Snippet:** ""At Chase, we're committed to providing the tools you need to help you monitor your account(s).""  
+   **Status:** Unread  
+
+2. **Sender:** Adobe Special Offers (mail@mail.adobe.com)  
+   **Date:** November 24, 2025  
+   **Subject:** Don't miss this Black Friday deal  
+   **Snippet:** ""Offer ends soon. Save 50% on Creative Cloud Pro for teams.""  
+   **Status:** Read  
+
+3. **Sender:** Chase (no.reply.alerts@chase.com)  
+   **Date:** November 24, 2025  
+   **Subject:** We sent your wire transfer  
+   **Snippet:** ""We sent your wire transfer referenced above, as you requested.""  
+   **Status:** Unread  
+
+4. **Sender:** MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Date:** November 21, 2025  
+   **Subject:** Job Assigned – Please Review  
+   **Snippet:** ""Hello ASIA AMODEO, A new job has been assigned to you.""  
+   **Status:** Read  
+
+5. **Sender:** Adobe Special Offers (mail@mail.adobe.com)  
+   **Date:** November 21, 2025  
+   **Subject:** Save 50% with this Black Friday offer  
+   **Snippet:** ""Don't miss this deal on Creative Cloud Pro for teams.""  
+   **Status:** Unread  
+
+These emails may contain relevant information about your discussions or decisions regarding the annual report. Would you like to look into any specific email or require more details?",beginner,keyword search,Use elasticsearch_search with keyword filter for annual report,llm_generated
+Can you show me all emails I received this month?,"It looks like there are no emails received this month. If you're expecting emails or need help with anything else, just let me know!",beginner,date-based search,Use elasticsearch_search with date_from parameter for the current month,llm_generated
+What unread messages do I have from my team?,"Here are the unread messages from your team:
+
+1. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Unlock the power of connection with Vanessa Van Edwards  
+   **Date:** Mon, 24 Nov 2025  
+   **Snippet:** Join our guest speaker on December 4 for her expert insights...
+
+2. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+   **Subject:** Get paid by referring Google Workspace  
+   **Date:** Sat, 22 Nov 2025  
+   **Snippet:** Share Workspace and earn rewards...
+
+3. **From:** ""Elevate by monday.com"" <team@learn.mail.monday.com>  
+   **Subject:** Want the truth about Elevate Online?  
+   **Date:** Thu, 20 Nov 2025  
+   **Snippet:** 2 weeks left to see why everyone’s talking about Elevate Online...
+
+4. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Free CPE credits on Dec 4th at Intuit Connect ON — Register today  
+   **Date:** Wed, 19 Nov 2025  
+   **Snippet:** Take an in-depth look at Intuit's latest innovations...
+
+5. **From:** ""Elevate by monday.com"" <team@learn.mail.monday.com>  
+   **Subject:** AI is changing everything about work - are you ready?  
+   **Date:** Mon, 17 Nov 2025  
+   **Snippet:** Join 100K+ leaders mastering the AI-powered future of work...
+
+6. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+   **Subject:** Regarding your account: Fix potential security issues  
+   **Date:** Thu, 13 Nov 2025  
+   **Snippet:** Take action now for better protection...
+
+7. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** It’s on: Registration now open for Intuit Connect ON  
+   **Date:** Wed, 12 Nov 2025  
+   **Snippet:** Get free CPE credits and take an in-depth look at Intuit's latest innovations...
+
+8. **From:** ""Elevate by monday.com"" <team@learn.mail.monday.com>  
+   **Subject:** Made for you: The Elevate Online track built for your role  
+   **Date:** Tue, 11 Nov 2025  
+   **Snippet:** Free to join. Built for you...
+
+9. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Save the Date: A virtual Intuit Connect experience is coming  
+   **Date:** Thu, 6 Nov 2025  
+   **Snippet:** The momentum continues December 4...
+
+10. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+    **Subject:** Stand out on Google with a no-cost Business Profile  
+    **Date:** Wed, 29 Oct 2025  
+    **Snippet:** Create your no-cost Business Profile...
+
+Let me know if you would like to read any specific message or perform any action!",beginner,sender + status search,Use elasticsearch_search with sender filter and status filter for unread,llm_generated
+Find emails from last week that contain 'meeting notes'.,"It looks like there are no emails from last week that contain the phrase ""meeting notes."" If you need help with anything else or want to search for different keywords or dates, just let me know!",beginner,date + keyword search,Use elasticsearch_search with date_from and keyword filter,llm_generated
+Show me all emails that have attachments.,"It looks like there are currently no emails in your inbox that have attachments. If you need assistance with anything else, just let me know!",beginner,attachment search,Use search_attachments to filter for emails containing attachments,llm_generated
+What emails did I receive from HR this week?,"It looks like you didn't receive any emails from HR this week (from October 2 to October 8, 2023). If you need assistance with anything else, feel free to ask!",beginner,sender + date search,Use elasticsearch_search with sender filter and date_from parameter,llm_generated
+Can you find emails that mention 'project deadline'?,"Here are the emails that mention ""project deadline"":
+
+1. **From:** MYS USA INC (no-reply@yachtlogicpro.com)
+   - **Subject:** Job Assigned – Please Review
+   - **Date:** November 21, 2025
+   - **Snippet:** A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.
+   - **Labels:** IMPORTANT, CATEGORY_PERSONAL
+
+2. **From:** MYS USA INC (no-reply@yachtlogicpro.com)
+   - **Subject:** Job Assigned – Please Review
+   - **Date:** November 21, 2025
+   - **Snippet:** A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline.
+   - **Labels:** YELLOW_STAR, IMPORTANT, STARRED, CATEGORY_UPDATES
+
+These emails relate to tasks with deadlines, highlighting the importance of completing them on time. If you need any further details about these emails or actions to be taken, let me know!",beginner,keyword search,Use elasticsearch_search with keyword filter for 'project deadline',llm_generated
+Show me emails from the last 30 days that have the word 'important'.,"Here are some emails from the last 30 days that contain the word ""important"":
+
+1. **From:** Chase (no.reply.alerts@chase.com)  
+   **Subject:** Important Business Banking Alert  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Dear Customer, At Chase, we're committed to providing the tools you need to help you monitor your account(s). Below is a list of the latest transactions for the accounts in your profile...""
+
+2. **From:** Adobe Special Offers (mail@mail.adobe.com)  
+   **Subject:** Don't miss this Black Friday deal  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Offer ends soon. Save 50% on Creative Cloud Pro for teams...""
+
+3. **From:** Alibaba Remind (remind@notice.alibaba.com)  
+   **Subject:** You have 14 unread messages from Alibaba.com  
+   **Date:** November 23, 2025  
+   **Snippet:** ""Hi MYSUSA, You have 14 unread messages from Alibaba.com View and reply now Continue communication with the supplier and don't miss important business opportunities...""
+
+4. **From:** MYS USA INC (no-reply@yachtlogicpro.com)  
+   **Subject:** Job Assigned – Please Review  
+   **Date:** November 21, 2025  
+   **Snippet:** ""Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. It’s essential that this task is completed by the deadline...""
+
+Would you like to see more emails, or do you need help with anything else?",beginner,date + keyword search,Use elasticsearch_search with date_from and keyword filter,llm_generated
+What emails did I receive from clients that are marked as unread?,"Here are the unread emails you received from clients:
+
+1. **From:** Pier Sixty-Six Resort <piersixtysix@contact-client.com>  
+   **Subject:** A Season of Sun & Celebration Awaits  
+   **Date:** Fri, 07 Nov 2025  
+   **Snippet:** Feasts, flavor, celebration—Thanksgiving arrives at Pier Sixty-Six.
+
+2. **From:** Pier Sixty-Six Resort <piersixtysix@contact-client.com>  
+   **Subject:** October is Giving... Wine, Dine and Moonlight Shine  
+   **Date:** Fri, 03 Oct 2025  
+   **Snippet:** [Snippet unavailable]
+
+3. **From:** Pier Sixty-Six Resort <piersixtysix@contact-client.com>  
+   **Subject:** From Moonlit Nights to Waterfront Days  
+   **Date:** Fri, 05 Sep 2025  
+   **Snippet:** [Snippet unavailable]
+
+4. **From:** Pier Sixty-Six Resort <piersixtysix@contact-client.com>  
+   **Subject:** Indulge in a Little More  
+   **Date:** Wed, 06 Aug 2025  
+   **Snippet:** Spa, sip, swim and stay—see what's happening at Pier Sixty-Six.
+
+If you need more details about any specific email, just let me know!",beginner,sender + status search,Use elasticsearch_search with sender filter for clients and status filter for unread,llm_generated
+Find all my emails to the marketing department.,"It looks like I couldn't find any emails sent to the marketing department in your inbox. Would you like me to search for a specific term or phrase, or maybe look for emails from them instead?",beginner,recipient filter,Use elasticsearch_search with recipient filter,llm_generated
+What emails did I send that have attachments?,"It looks like there are no emails in your sent folder that include attachments. If you have any specific emails in mind or would like to search for attachments from a particular sender or topic, just let me know!",beginner,attachment search,Use search_attachments with sender filter for my email address,llm_generated
+Can you show me emails from my last project?,"Could you please provide me with the name of the project or any specific keywords, senders, or dates associated with those emails? This will help me search your email history more effectively.",intermediate,keyword search,Use elasticsearch_search with keywords related to the project,llm_generated
+Find all emails that are part of a thread with Sarah.,"It looks like there are no emails in the thread with Sarah. If you'd like to try searching for a different sender or for specific keywords, just let me know!",intermediate,conversation threading,Use conversation_history tool for complete thread with Sarah,llm_generated
+Show me invoices received in the last two weeks.,"It looks like there are no invoices received in the last two weeks. If you need assistance with something else or want to check a different time period, just let me know!",intermediate,attachment + date search,Use elasticsearch_search with date_from and attachment filter for invoices,llm_generated
+What unread emails are there from my project manager?,"You don't have any unread emails from your project manager at the moment. If you need help with anything else, feel free to ask!",intermediate,sender + status search,Use elasticsearch_search with sender filter for project manager and status filter for unread,llm_generated
+Can you list all emails that mention the word 'urgent'?,"Here are the emails that mention the word ""urgent"":
+
+1. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX  
+
+2. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX  
+
+3. **From:** Scot Fraser (sfraser@camperandnicholsons.com)  
+   **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** ""For any urgent matters, you can reach me on my mobile directly.""  
+   **Labels:** CATEGORY_PERSONAL, INBOX  
+
+4. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX  
+
+If you need additional details about any specific email, feel free to ask!",intermediate,keyword search,Use elasticsearch_search with keyword filter for 'urgent',llm_generated
+Find all conversations with the account team.,"It looks like there are no conversations in your inbox with the account team. If you have another email address or a different team in mind, please let me know!",intermediate,conversation threading,Use conversation_history tool for complete threads with the account team,llm_generated
+Show me emails with attachments larger than 5MB.,"It looks like there are currently no emails in your inbox with attachments larger than 5MB. If you have any other specific search requests or need assistance with anything else, feel free to let me know!",intermediate,attachment search,Use search_attachments with size filter for >5MB,llm_generated
+What emails are there about the budget review that I haven't read?,"Here are the unread emails related to the budget review:
+
+1. **Subject:** 9 jaw-dropping stargazing experiences 🌌  
+   **Sender:** Tripadvisor  
+   **Date:** November 23, 2025  
+   **Snippet:** Plus, underrated European ski towns.  
+   **Categories:** Promotions, Unread, Inbox  
+
+2. **Subject:** Get paid by referring Google Workspace  
+   **Sender:** The Google Workspace Team  
+   **Date:** November 22, 2025  
+   **Snippet:** Share Workspace and earn rewards.  
+   **Categories:** Unread, Updates, Inbox  
+
+3. **Subject:** Drawing for MYS  
+   **Sender:** Pinterest  
+   **Date:** November 22, 2025  
+   **Snippet:** “don’t beat yourself up” oil painting...  
+   **Categories:** Promotions, Unread, Inbox  
+
+4. **Subject:** Power Up Your Productivity and Save on a New PC!  
+   **Sender:** Costco Wholesale  
+   **Date:** November 21, 2025  
+   **Snippet:** Featuring Acer, HP, Dell, Microsoft...  
+   **Categories:** Promotions, Unread, Inbox  
+
+It seems there are no specific emails discussing the budget review. Would you like to search for more specific terms or check something else?",intermediate,keyword + status search,Use elasticsearch_search with keyword filter for 'budget review' and status filter for unread,llm_generated
+Can you show me emails from the last quarter that mention 'sales report'?,"It looks like there are no emails from the last quarter that mention ""sales report."" If you need help with something else or a different search, just let me know!",intermediate,date + keyword search,Use elasticsearch_search with date_from for the last quarter and keyword filter,llm_generated
+What emails did I send that have 'feedback' in the subject line?,"It looks like you haven't sent any emails with 'feedback' in the subject line. If you need help with something else or want to search using different criteria, just let me know!",intermediate,subject filter,Use elasticsearch_search with sender filter and subject filter for 'feedback',llm_generated
+Show me all unread emails from the last month that have attachments.,"Here are all the unread emails from the last month that have attachments:
+
+1. **From:** askaradmin@em.com  
+   **Subject:** Invoice from Enterprise Rent-A-Car  
+   **Date:** Tue, 18 Nov 2025  
+   **Snippet:** Attached please find your Enterprise Rent-A-Car invoice. Thank you for your prompt payment.
+
+2. **From:** Google Payments <payments-noreply@google.com>  
+   **Subject:** Google Workspace: Your invoice is available for mysusainc.com  
+   **Date:** Sat, 01 Nov 2025  
+   **Snippet:** Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.
+
+3. **From:** Google Payments <payments-noreply@google.com>  
+   **Subject:** Google Workspace: Your invoice is available for mysusainc.com  
+   **Date:** Thu, 02 Oct 2025  
+   **Snippet:** Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.
+
+4. **From:** Google Payments <payments-noreply@google.com>  
+   **Subject:** Google Workspace: Your invoice is available for mysusainc.com  
+   **Date:** Mon, 01 Sep 2025  
+   **Snippet:** Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.
+
+5. **From:** (No sender)  
+   **Subject:** REVOLUT ACCOUNT, APP % CARD  
+   **Date:** Not available  
+   **Snippet:** Hi Ludo & Zhady, Can you please download the Revolut business app on your phone and follow the login instructions.
+
+6. **From:** (No sender)  
+   **Subject:** NCE -JNB FOR PHILIPPUS SCHALEKAMP  
+   **Date:** Not available  
+   **Snippet:** Good morning, Would you be so kind as to send me some options for Mr. Philippus Schalekamp travelling one-way from Nice, Fr – Johannesburg, ZA Monday 2 nd September.
+
+Let me know if you need any further details or assistance!",intermediate,date + status + attachment search,Use elasticsearch_search with date_from for last month and status filter for unread and attachments,llm_generated
+Find conversations with my teammates that mention 'updates'.,"It looks like there are no conversations with your teammates that mention ""updates"" in the emails. If you need help with anything else, feel free to ask!",intermediate,conversation threading + keyword search,Use conversation_history tool with keyword filter for 'updates',llm_generated
+Can you filter emails to show only those from our suppliers?,"It looks like there are no emails currently categorized under suppliers in your inbox. If you'd like, I can help you categorize emails from specific suppliers, or assist with something else!",intermediate,sender filter,Use elasticsearch_search with sender filter for known suppliers,llm_generated
+What emails did I receive that reference the '2024 budget' and are unread?,"Here are the unread emails that mention the '2024 budget':
+
+1. **From:** pdfFiller (noreply@pdffiller.com)  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** November 25, 2025  
+   **Snippet:** Your smartest investment this Black Friday.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+2. **From:** Enterprise Rent-A-Car (Enterprise-Rent-A-Car@email.enterprise.com)  
+   **Subject:** Luxury in Motion  
+   **Date:** November 24, 2025  
+   **Snippet:** Travel like you mean it.  
+   **Labels:** UNREAD, CATEGORY_PROMOTIONS, INBOX
+
+3. **From:** The Intuit Connect team (Intuit@mkt.intuit.com)  
+   **Subject:** Unlock the power of connection with Vanessa Van Edwards  
+   **Date:** November 24, 2025  
+   **Snippet:** Join our guest speaker on December 4 for her expert insights.  
+   **Labels:** UNREAD, CATEGORY_PROMOTIONS, INBOX
+
+4. **From:** Chase (no.reply.alerts@chase.com)  
+   **Subject:** Important Business Banking Alert  
+   **Date:** November 24, 2025  
+   **Snippet:** Dear Customer, At Chase, we're committed to providing the tools you need...  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+5. **From:** French Eaux (my@newsletter.frencheaux.com)  
+   **Subject:** 💧 After METSTRADE: French Eaux Opens New Distribution Opportunities  
+   **Date:** November 24, 2025  
+   **Snippet:** Purified water on board, together.  
+   **Labels:** UNREAD, CATEGORY_PROMOTIONS, INBOX
+
+6. **From:** Chase (no.reply.alerts@chase.com)  
+   **Subject:** We sent your wire transfer  
+   **Date:** November 24, 2025  
+   **Snippet:** From Account Ending in 9975 Transaction Number: 12041584932 Dear Customer:  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+These are the most recent unread emails that reference the '2024 budget'. If you need further details on any specific email, just let me know!",intermediate,keyword + status search,Use elasticsearch_search with keyword filter and status filter for unread,llm_generated
+Show me all conversations with attachments from the past month.,"It looks like there are no conversations with attachments from the past month. If there's anything specific you're looking for or if you would like to search a different timeframe, just let me know!",intermediate,conversation threading + attachment search,Use conversation_history tool with date_from for last month and attachment filter,llm_generated
+What are the emails from my director that include 'strategy' in them?,"It looks like there are no emails from your director that include the word ""strategy."" If you need to search for something else or check a different sender, feel free to let me know!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter and keyword filter for 'strategy',llm_generated
+Can you show me the last 10 emails I sent?,"It seems that I currently don't have any records of the last 10 emails you sent. It's possible that there may not be any recent emails available in the system. If you'd like to check another specific timeframe or a particular recipient, please let me know!",beginner,sent emails,Use elasticsearch_search with sender filter and limit results,llm_generated
+Find me any emails from last month that were not replied to.,"It looks like there are no unread emails from last month. If you're looking for something specific, let me know and I can help you search more effectively!",advanced,date + status search,Use elasticsearch_search with date_from and status filter for unreplied,llm_generated
+What emails did I receive from my clients about the new contract?,"Here are some emails I found related to the new contract from your clients:
+
+1. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period...""
+
+2. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period...""
+
+3. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Hi all, Please paste the following message as your automated email response from today through Wednesday...""
+
+4. **From:** Adobe Special Offers (mail@mail.adobe.com)  
+   **Subject:** Don't miss this Black Friday deal  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Offer ends soon. Save 50% on Creative Cloud Pro for teams...""
+
+5. **From:** Scot Fraser (sfraser@camperandnicholsons.com)  
+   **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** ""Dear Sender, I am currently out of the office. I will be back in the office on Monday 8th December...""
+
+6. **From:** Alibaba Remind (remind@notice.alibaba.com)  
+   **Subject:** 🔹 charger plates: trending now  
+   **Date:** November 23, 2025  
+   **Snippet:** ""Hi MYSUSA, find items with great prices...""
+
+Let me know if you need more details about any specific email or further assistance!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter for clients and keyword filter for 'new contract',llm_generated
+Show me all emails that have been marked as spam.,"I currently don't have direct access to view or fetch spam emails from your Gmail account, as spam management is handled by Gmail itself. 
+
+If you want to check your spam emails, you can log into your Gmail account and navigate to the ""Spam"" folder on the left sidebar, where you will see all emails that have been marked as spam.
+
+Let me know if there's anything else I can assist you with!",beginner,spam filter,Use elasticsearch_search with status filter for spam,llm_generated
+Can you find all emails from the finance department that contain 'tax'?,"It looks like there are no emails from the finance department that contain the word ""tax."" If you have any other specific criteria or different keywords in mind, feel free to let me know!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter and keyword filter for 'tax',llm_generated
+What emails do I have that are flagged for follow-up?,"Here are some emails in your inbox that are flagged for follow-up:
+
+1. **From:** pdfFiller (noreply@pdffiller.com)  
+   **Subject:** Forget the deals. Invest in productivity.  
+   **Date:** November 25, 2025  
+   **Snippet:** Your smartest investment this Black Friday.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+2. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** Hi all, Please paste the following message as your automated email response...  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX
+
+3. **From:** Tripadvisor (inspiration@mp1.tripadvisor.com)  
+   **Subject:** 9 jaw-dropping stargazing experiences  
+   **Date:** November 23, 2025  
+   **Snippet:** Plus, underrated European ski towns…  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD, INBOX
+
+4. **From:** The Google Workspace Team (workspace-noreply@google.com)  
+   **Subject:** Get paid by referring Google Workspace  
+   **Date:** November 22, 2025  
+   **Snippet:** Share Workspace and earn rewards.  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+5. **From:** Pinterest (recommendations@explore.pinterest.com)  
+   **Subject:** Drawing for MYS  
+   **Date:** November 22, 2025  
+   **Snippet:** **Don't beat yourself up** oil painting octopus lady by skirua...  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD, INBOX
+
+6. **From:** Costco Wholesale (Costco@digital.costco.com)  
+   **Subject:** Power Up Your Productivity and Save on a New PC!  
+   **Date:** November 21, 2025  
+   **Snippet:** Featuring Acer, HP, Dell…  
+   **Labels:** CATEGORY_PROMOTIONS, UNREAD, INBOX
+
+7. **From:** Tripadvisor (product@mp1.tripadvisor.com)  
+   **Subject:** Your November member update  
+   **Date:** November 21, 2025  
+   **Snippet:** Get the full rundown inside…  
+   **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+If you need more details on any specific email or further assistance, just let me know!",intermediate,status search,Use elasticsearch_search with status filter for flagged emails,llm_generated
+Show me emails with attachments that are older than a year.,"It looks like there are no emails with attachments that are older than a year in your inbox. If you have more specific criteria or another request, feel free to let me know!",advanced,attachment + date search,Use search_attachments with date filter for older than a year,llm_generated
+What emails did I send to the IT department last year?,"It looks like there are no emails sent to the IT department last year. If you have more specific details or if you'd like to search for another time frame or recipient, just let me know!",intermediate,recipient + date search,Use elasticsearch_search with recipient filter and date_from for last year,llm_generated
+Can you find all unread emails from my team members?,"Here are all the unread emails from your team members:
+
+1. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Unlock the power of connection with Vanessa Van Edwards  
+   **Date:** Mon, 24 Nov 2025  
+   **Snippet:** Join our guest speaker on December 4 for her expert insights...
+
+2. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+   **Subject:** Get paid by referring Google Workspace  
+   **Date:** Sat, 22 Nov 2025  
+   **Snippet:** Share Workspace and earn rewards...
+
+3. **From:** ""Elevate by monday.com"" <team@learn.mail.monday.com>  
+   **Subject:** Want the truth about Elevate Online?  
+   **Date:** Thu, 20 Nov 2025  
+   **Snippet:** 2 weeks left to see why everyone's talking about Elevate Online...
+
+4. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Free CPE credits on Dec 4th at Intuit Connect ON — Register today  
+   **Date:** Wed, 19 Nov 2025  
+   **Snippet:** Take an in-depth look at Intuit's latest innovations at our virtual event...
+
+5. **From:** ""Elevate by monday.com"" <team@learn.mail.monday.com>  
+   **Subject:** AI is changing everything about work - are you ready?  
+   **Date:** Mon, 17 Nov 2025  
+   **Snippet:** Join 100K+ leaders mastering the AI-powered future of work...
+
+6. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+   **Subject:** Regarding your account: Fix potential security issues  
+   **Date:** Thu, 13 Nov 2025  
+   **Snippet:** Take action now for better protection...
+
+7. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** It’s on: Registration now open for Intuit Connect ON  
+   **Date:** Wed, 12 Nov 2025  
+   **Snippet:** Get free CPE credits and take an in-depth look at Intuit's latest innovations...
+
+8. **From:** ""Elevate by monday.com"" <team@learn.mail.monday.com>  
+   **Subject:** Made for you: The Elevate Online track built for your role  
+   **Date:** Tue, 11 Nov 2025  
+   **Snippet:** Free to join. Built for you...
+
+9. **From:** The Intuit Connect team <Intuit@mkt.intuit.com>  
+   **Subject:** Save the Date: A virtual Intuit Connect experience is coming  
+   **Date:** Thu, 6 Nov 2025  
+   **Snippet:** The momentum continues December 4...
+
+10. **From:** The Google Workspace Team <workspace-noreply@google.com>  
+    **Subject:** Stand out on Google with a no-cost Business Profile  
+    **Date:** Wed, 29 Oct 2025  
+    **Snippet:** Create your no-cost Business Profile...
+
+Let me know if you need help with anything specific from these emails!",beginner,sender + status search,Use elasticsearch_search with sender filter and status,llm_generated
+Show me emails from the last month that include attachments.,"It looks like there are no emails from the last month that include attachments in your inbox. If you need help with anything else or want to search for emails from a different timeframe, just let me know!",intermediate,date + attachment search,Use elasticsearch_search with date filter and search_attachments,llm_generated
+What emails have the word 'urgent' in them?,"Here are the emails that contain the word ""urgent"":
+
+1. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX  
+   **Status:** Read
+
+2. **From:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX  
+   **Status:** Read
+
+3. **From:** Scot Fraser (sfraser@camperandnicholsons.com)  
+   **Subject:** Automatic reply: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** ""For any urgent matters, you can reach me on my mobile directly.""  
+   **Labels:** CATEGORY_PERSONAL, INBOX  
+   **Status:** Read
+
+4. **From:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** ""A member of our team will address any urgent matters promptly.""  
+   **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX  
+   **Status:** Read
+
+If you need more details about any of these emails, just let me know!",beginner,keyword search,Use elasticsearch_search with keyword,llm_generated
+Find all emails related to the quarterly report.,"I found several emails related to the quarterly report. Here are the details:
+
+1. **Email from Chase**
+   - **Subject:** Important Business Banking Alert
+   - **Date:** November 24, 2025
+   - **Snippet:** Dear Customer, At Chase, we're committed to providing the tools you need to monitor your account(s). Below is a list of the latest transactions...
+   - **Status:** Unread
+   - **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+2. **Email from Adobe Special Offers**
+   - **Subject:** Don't miss this Black Friday deal
+   - **Date:** November 24, 2025
+   - **Snippet:** Offer ends soon. Save 50% on Creative Cloud Pro for teams...
+   - **Status:** Read
+   - **Labels:** CATEGORY_PROMOTIONS, INBOX
+
+3. **Email from Chase**
+   - **Subject:** We sent your wire transfer
+   - **Date:** November 24, 2025
+   - **Snippet:** From Account Ending in 9975 Transaction Number: 12041584932 Dear Customer: We sent your wire transfer referenced above, as you requested...
+   - **Status:** Unread
+   - **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+4. **Email from MYS USA INC**
+   - **Subject:** Job Assigned – Please Review
+   - **Date:** November 21, 2025
+   - **Snippet:** Hello ASIA AMODEO, A new job has been assigned to you. Please review the details and proceed with the necessary services. Ensure this task is completed by the deadline...
+   - **Status:** Read
+   - **Labels:** IMPORTANT, CATEGORY_PERSONAL, INBOX
+
+5. **Email from Tripadvisor**
+   - **Subject:** Your November member update
+   - **Date:** November 21, 2025
+   - **Snippet:** Get the full rundown inside...
+   - **Status:** Unread
+   - **Labels:** UNREAD, CATEGORY_UPDATES, INBOX
+
+If you need more details or specific information from any of these emails, just let me know!",beginner,keyword search,Use elasticsearch_search with relevant keywords,llm_generated
+Can you give me the email threads with sarah@company.com?,"It looks like there are no email threads with sarah@company.com in your inbox. If you need help with anything else, just let me know!",intermediate,conversation threading,Use conversation_history tool for complete thread,llm_generated
+Show me emails I received last week.,"It looks like there are no emails in your inbox from last week, October 9 to October 15, 2023. If you need help with anything else or if you'd like to check a different date range, just let me know!",beginner,date-based search,Use elasticsearch_search with date_from parameter,llm_generated
+What emails from my clients are flagged as important?,"It looks like there are no emails from your clients that are currently flagged as important in your inbox. If you'd like, I can search for other categories of emails or check for unread messages. Let me know how you would like to proceed!",intermediate,sender + status search,Use elasticsearch_search with sender filter and status filter,llm_generated
+Find emails that contain links to documents.,"Here are some recent emails that contain links to documents:
+
+1. **From:** Adobe Special Offers  
+   **Subject:** Don't miss this Black Friday deal  
+   **Date:** 2025-11-24  
+   **Snippet:** ""View Web Version: [link](https://t-info.mail.adobe.com/r/?id=t22e7c7e3,82facb0d,c0df622f&e=cDE9JTQwTmowZXBsZnhMU01ram9KSzVxQWJEZCUyRk5xYlpzRVVpR1lKWm5GVHRiaklzJTNE&s=SDT_b2tWBWpOXgqAni37tPNQ2gVy66o59boIEpiyxOI)""
+
+2. **From:** Chase  
+   **Subject:** We sent your wire transfer  
+   **Date:** 2025-11-24  
+   **Snippet:** ""If you're concerned about the authenticity of this message, please visit [chase.com/CustomerService](http://www.chase.com/CustomerService) for options on how to contact us.""
+
+3. **From:** Tripadvisor  
+   **Subject:** 9 jaw-dropping stargazing experiences  
+   **Date:** 2025-11-23  
+   **Snippet:** ""Read more [link](https://t1.mp1.tripadvisor.com/f/a/6WvvSHZ_D7hwNIJHwsRSmA~~/AAQRxRA~/gaKv4vCa37tPTCFD4bGMd3P2ismUEXv9w9IOLA2Z-UnIeiowPUbeeAKxTRx5cxy_wWPpX5PCY0Q7n6CmzDDOF_A4yn-SHZAUN99SM3AbKru_RLl4BdRKZK7WgWDzgPgoMl31kXHUnyA8ssrPPPeTAbwLMl40Tj15LNEthtgacRdlUi7ZQ8idv8AfyNr3A1aGStD3uNtUUKqu6vidgezkpNEoGWHpKh9LDIBy1aWxOXbbn791BluADBIhcM88WwJRFkAyFjT1cEC-pDpiLrIMjNvoH8YT7-KatJoPmnCP-1Zat3WZhvi_fH2s6a4JvQOQBYg92B4CNvP5Pw4ehTYL-Sr5-UGC8ndjLDKZnu1er-5ogRIOA7Qa2pTDe9Xgn25vPB4gZnQTaZhesf-8Dr9zTIUYnwlhFAkR9UPKU4v09UKJp5c32tfgc24DxiWCDBC5AANKe6Og5CY-2en7cKcukuO1TaHtJK6rcOi94-ps1ap_GzvQ7rEf65qzgidLhgyFdG0ZnDJUYEDLA5UU5-bCZTHNyVf4Le75eIbVUYMfLh-MlIB9ouFxbV2bVW0VnLZ1zCm_rAE1NVWhdAzdkcXNiQ~~)""
+
+If you need further details or assistance, just let me know!",intermediate,keyword search,Use elasticsearch_search with keyword search for 'link',llm_generated
+Show me emails from last year that mention 'investment'.,"It looks like there are no emails from last year that mention ""investment."" If you have any other keywords or parameters you'd like me to use, feel free to let me know!",intermediate,date + keyword search,Use elasticsearch_search with date filter and keyword,llm_generated
+Can you show me my unread emails from the past two weeks?,"Here are your unread emails from the past two weeks:
+
+1. **Sender**: pdfFiller  
+   **Subject**: Forget the deals. Invest in productivity.  
+   **Date**: Tue, 25 Nov 2025  
+   **Snippet**: Your smartest investment this Black Friday.
+
+2. **Sender**: Enterprise Rent-A-Car  
+   **Subject**: Luxury in Motion  
+   **Date**: Mon, 24 Nov 2025  
+   **Snippet**: Travel like you mean it. Enterprise Rent Locations...
+
+3. **Sender**: Alibaba Remind  
+   **Subject**: 📈 sublimation wireless charger: update with the latest trends  
+   **Date**: Mon, 24 Nov 2025  
+   **Snippet**: Over 1 Million Users Were Searching for These Keywords...
+
+4. **Sender**: The Intuit Connect team  
+   **Subject**: Unlock the power of connection with Vanessa Van Edwards  
+   **Date**: Mon, 24 Nov 2025  
+   **Snippet**: Join our guest speaker on December 4 for her expert insights...
+
+5. **Sender**: Chase  
+   **Subject**: Important Business Banking Alert  
+   **Date**: Mon, 24 Nov 2025  
+   **Snippet**: Dear Customer, At Chase, we are committed to...
+
+6. **Sender**: French Eaux  
+   **Subject**: 💧 After METSTRADE: French Eaux Opens New Distribution Opportunities  
+   **Date**: Mon, 24 Nov 2025  
+   **Snippet**: Purified water on board, together.
+
+7. **Sender**: Chase  
+   **Subject**: We sent your wire transfer  
+   **Date**: Mon, 24 Nov 2025  
+   **Snippet**: From Account Ending in 9975 Transaction Number : 12041584932...
+
+8. **Sender**: Tripadvisor  
+   **Subject**: 9 jaw-dropping stargazing experiences 🌠  
+   **Date**: Sun, 23 Nov 2025  
+   **Snippet**: Plus, underrated European ski towns.
+
+9. **Sender**: The Google Workspace Team  
+   **Subject**: Get paid by referring Google Workspace  
+   **Date**: Sat, 22 Nov 2025  
+   **Snippet**: Share Workspace and earn rewards.
+
+10. **Sender**: Pinterest  
+    **Subject**: Drawing for MYS  
+    **Date**: Sat, 22 Nov 2025  
+    **Snippet**: “don’t beat yourself up” oil painting...
+
+If you'd like to read any of these emails or need further help, just let me know!",beginner,date + status search,Use elasticsearch_search with date filter and unread status,llm_generated
+Find all emails sent by my manager in March.,"It looks like there were no emails sent by your manager in March. If you have any specific subjects or keywords in mind, I can try searching with those to see if anything else comes up!",intermediate,sender + date search,Use elasticsearch_search with sender and date filters,llm_generated
+What emails have a subject that includes 'meeting notes'?,"I didn't find any emails with the subject that includes ""meeting notes."" If you're looking for something specific or if you'd like me to search for something else, just let me know!",beginner,subject search,Use elasticsearch_search with subject filter,llm_generated
+Show me all emails with 'invoice' in the attachment name.,"It looks like there are no emails with 'invoice' in the attachment name in your inbox. If you need help with something else, feel free to ask!",intermediate,attachment name search,Use search_attachments with keyword in filename,llm_generated
+Can you find any emails that were sent last Friday?,"It looks like there were no emails sent last Friday, October 27, 2023. If you need help with anything else, feel free to ask!",beginner,date-based search,Use elasticsearch_search with specific date,llm_generated
+What conversations have I had with the marketing team?,"It looks like there haven't been any conversations with the marketing team in your inbox. If you need any help with anything else or want to check another contact, just let me know!",intermediate,conversation threading,Use conversation_history tool for relevant addresses,llm_generated
+Show me emails that contain the phrase 'thank you'.,"Here are some emails that contain the phrase ""thank you"":
+
+1. **Email from:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test 3  
+   **Date:** November 24, 2025  
+   **Snippet:** Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period...
+
+2. **Email from:** Jennifer Malone (florida@medyachtservices.com)  
+   **Subject:** Automatic reply: test  
+   **Date:** November 24, 2025  
+   **Snippet:** Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period...
+
+3. **Email from:** Pauline Le Thiec (plethiec@camperandnicholsons.com)  
+   **Subject:** RE: MYS USA - Inv. 2025-002LH - USD 5,130.78  
+   **Date:** November 24, 2025  
+   **Snippet:** Good morning, Thank you for your email, this is duly noted. Kind regards, Pauline Le Thiec Yacht Accountant...
+
+4. **Email from:** MYS USA TATI (operations@mysusainc.com)  
+   **Subject:** Thanksgiving Holiday Office Hours – MYS USA INC  
+   **Date:** November 24, 2025  
+   **Snippet:** ...Thank you for contacting MYS USA INC. We would like to inform you of our adjusted office schedule for this week's upcoming Thanksgiving holiday period...
+
+If you need more details about any email, feel free to ask!",beginner,keyword search,Use elasticsearch_search with exact phrase,llm_generated
+Find all emails from the last 30 days that mention 'training'.,"Here are the emails from the last 30 days that mention ""training"":
+
+1. **From:** Tripadvisor (inspiration@mp1.tripadvisor.com)  
+   **To:** florida@mysusainc.com  
+   **Subject:** 9 jaw-dropping stargazing experiences 🌌  
+   **Date:** November 23, 2025  
+   **Snippet:** ""Plus, underrated European ski towns...""  
+   **Labels:** Promotions, Unread, Inbox
+
+If you need any more details or further assistance, feel free to ask!",intermediate,date + keyword search,Use elasticsearch_search with date and keyword filters,llm_generated
+Can you show me emails with attachments that are Word documents?,"It looks like there are currently no emails with attachments in your inbox. If you have any other requests or need help with something else, feel free to ask!",intermediate,attachment type search,Use search_attachments for specific document type,llm_generated
+What emails are marked as unread from my suppliers?,"It looks like there are no unread emails from your suppliers in your inbox right now. If you need help with anything else, feel free to ask!",intermediate,sender + status search,Use elasticsearch_search with sender filter and unread status,llm_generated
+Show me emails from the last year that have no attachments.,"It looks like there are no emails from the last year that have no attachments. If you have a different request or need to search for something else, feel free to let me know!",advanced,date + attachment status search,Use elasticsearch_search with date filter and check attachments,llm_generated
+Can you find emails with attachments that were sent by Alex?,"I couldn't find any emails with attachments sent by Alex. If you need help with something else or want to check for specific keywords or topics, just let me know!",intermediate,sender + attachment search,Use elasticsearch_search with sender and search_attachments,llm_generated
+What emails did I receive about the product launch?,"Here are some emails you received regarding the product launch:
+
+1. **Sender:** pdfFiller 
+   - **Subject:** Forget the deals. Invest in productivity.
+   - **Date:** November 25, 2025
+   - **Snippet:** Your smartest investment this Black Friday. 
+   - **Status:** Unread
+
+2. **Sender:** Chase 
+   - **Subject:** We sent your wire transfer
+   - **Date:** November 24, 2025
+   - **Snippet:** From Account Ending in 9975. Transaction Number: 12041584932 Dear Customer: We sent your wire transfer referenced above, as you requested. 
+   - **Status:** Unread
+
+3. **Sender:** Costco Wholesale 
+   - **Subject:** Power Up Your Productivity and Save on a New PC!
+   - **Date:** November 21, 2025
+   - **Snippet:** Featuring Acer, HP, Dell, Microsoft, MSI, Lenovo, ASUS and more. 
+   - **Status:** Unread
+
+Let me know if you need more details about any of these emails!",beginner,keyword search,Use elasticsearch_search with keyword related to product launch,llm_generated
+Find conversation threads that include both Steve and Lisa.,"It seems that I couldn't find any conversation threads that include both Steve and Lisa in your email history. It's possible that they haven't communicated together directly in your inbox. 
+
+If you have specific topics or details in mind related to your communication with either of them, let me know, and I can help you further.",advanced,complex conversation threading,Use conversation_history tool for both senders,llm_generated
+What emails received last weekend are still unread?,"It looks like there are no unread emails from last weekend (October 14-15) in your inbox. If you need help with anything else, feel free to ask!",intermediate,date + status search,Use elasticsearch_search with date and status filters,llm_generated
+Show me emails from contractors that mention 'contract'.,"It looks like there are no emails from contractors that mention the word ""contract"" in your inbox. If there's anything else you'd like to search for, just let me know!",intermediate,sender + keyword search,Use elasticsearch_search with sender filter and keyword,llm_generated
+Can you find emails with a specific date in the subject line?,"Yes, I can search for emails containing a specific date in the subject line. Please provide me with the date you want to look for, along with any additional details if needed, such as a time range or specific sender.",advanced,subject + date search,Use elasticsearch_search with subject filter and date format,llm_generated
+Show me all emails related to last month's budget meeting.,"It looks like there are no emails related to last month's budget meeting in your inbox. If you need help with anything else, feel free to ask!",intermediate,date + keyword search,Use elasticsearch_search with date filter and keywords,llm_generated
+Can you find me all emails from my personal account?,"It looks like there are no emails from your personal account in your inbox. If you have any specific criteria or folders you'd like me to look into, please let me know!",beginner,sender filter search,Use elasticsearch_search with sender filter for personal account,llm_generated
+What emails from last quarter still need a response?,"It looks like there are no unread emails from last quarter that still need a response. If you have any other specific criteria or need help with anything else, just let me know!",advanced,date + response status search,Use elasticsearch_search with date filter and response status,llm_generated
+Show me emails that mention 'project deadline' and were sent this week.,"It looks like there are no emails mentioning ""project deadline"" that were sent this week. If you need help with anything else or would like to search for something different, just let me know!",intermediate,date + keyword search,Use elasticsearch_search with date and keyword filters,llm_generated
