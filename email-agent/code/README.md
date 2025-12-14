@@ -73,6 +73,8 @@ docker start elasticsearch
 
 ### 6. Run the Agent
 
+#### Option A: Command Line Interface (CLI)
+
 ```bash
 make run
 # or manually: uv run main.py
@@ -83,20 +85,97 @@ On first run, the agent will:
 2. Fetch and index your emails
 3. Start an interactive chat session
 
-## Usage
+#### Option B: Streamlit Web Interface (Recommended)
 
-Once running, chat with your agent naturally:
+```bash
+make streamlit
+# or manually: uv run streamlit run streamlit_app.py --server.port 8501
+```
+
+This will start the web interface at `http://localhost:8501` with:
+- 💬 Chat interface with your email agent
+- 📊 Real-time monitoring and evaluation
+- 🔍 Tool call visualization
+- 📈 Performance metrics and response quality checks
+
+## How It Works
+
+### Architecture
+
+The Email Agent is a multi-component intelligent system that combines:
+
+1. **Gmail API Integration**: Authenticates and fetches emails from your Gmail account
+2. **Elasticsearch Storage**: Indexes and stores emails for fast semantic search
+3. **OpenAI GPT-4**: Powers natural language understanding and response generation
+4. **Tool-based Agent**: Uses multiple specialized tools to handle different email operations
+5. **Monitoring System**: Tracks conversations, evaluates responses, and provides analytics
+
+### Agent Tools
+
+The agent has access to the following tools:
+
+- **GmailFetchTool**: Fetches emails directly from Gmail API
+- **ElasticsearchSearchTool**: Searches indexed emails using semantic and keyword search
+- **ElasticsearchWriteTool**: Indexes new emails into Elasticsearch
+- **ConversationHistoryTool**: Retrieves past conversation context
+- **SearchAttachmentsTool**: Finds emails with specific attachments
+- **CategorizeEmailsTool**: Organizes emails into categories (work, personal, promotions, etc.)
+- **PriorityInboxTool**: Identifies and prioritizes important emails
+
+### Workflow
+
+1. **First Run**:
+   - Authenticates with Gmail (OAuth2 flow)
+   - Fetches all emails from your inbox
+   - Indexes emails into Elasticsearch with metadata (sender, subject, date, body, attachments)
+
+2. **Chat Interaction**:
+   - You ask a question in natural language
+   - GPT-4 analyzes your query and decides which tools to use
+   - Tools are executed (fetch, search, categorize, etc.)
+   - Agent synthesizes results and responds in natural language
+
+3. **Monitoring** (Streamlit only):
+   - Each conversation is logged with timestamps
+   - Tool calls are tracked
+   - Automatic evaluations check response quality
+   - Performance metrics (response time, success rate) are recorded
+
+### Example Queries
 
 ```
 You: Show my unread emails
-Agent: [fetches and displays unread emails]
+Agent: [uses GmailFetchTool to fetch unread emails]
 
-You: Find emails from john@example.com
-Agent: [searches and returns matching emails]
+You: Find emails from john@example.com about the proposal
+Agent: [uses ElasticsearchSearchTool with filters]
 
-You: What emails did I get about the project?
-Agent: [searches for "project" and returns results]
+You: What are my most important emails today?
+Agent: [uses PriorityInboxTool to rank by importance]
+
+You: Show me emails with PDF attachments
+Agent: [uses SearchAttachmentsTool to filter by attachment type]
+
+You: Organize my inbox by category
+Agent: [uses CategorizeEmailsTool to classify emails]
 ```
+
+## Monitoring Dashboard
+
+The project includes a separate monitoring dashboard to analyze agent performance:
+
+```bash
+make monitoring
+# or manually: uv run streamlit run monitoring_app.py --server.port 8502
+```
+
+Access at `http://localhost:8502` to view:
+
+- 📊 **Conversation Analytics**: Track all user interactions over time
+- ✅ **Quality Metrics**: Response quality checks and success rates
+- 🔧 **Tool Usage**: See which tools are used most frequently
+- ⏱️ **Performance**: Response times and latency analysis
+- 📝 **Manual Evaluation**: Review and provide feedback on agent responses
 
 ## Project Structure
 

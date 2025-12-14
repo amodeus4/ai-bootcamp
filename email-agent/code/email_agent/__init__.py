@@ -15,6 +15,8 @@ from .tools import (
     ElasticsearchWriteTool,
     ConversationHistoryTool,
     SearchAttachmentsTool,
+    CategorizeEmailsTool,
+    PriorityInboxTool,
 )
 from .evaluation_schemas import (
     CheckName,
@@ -40,6 +42,8 @@ __all__ = [
     "ElasticsearchWriteTool",
     "ConversationHistoryTool",
     "SearchAttachmentsTool",
+    "CategorizeEmailsTool",
+    "PriorityInboxTool",
     "CheckName",
     "EvaluationCheck",
     "EvaluationResult",

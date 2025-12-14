@@ -13,6 +13,7 @@ dependencies = [
     "python-dotenv",
     "markitdown",
     "pandas>=2.3.3",
+    "streamlit>=1.28.0",
 ]
 
 [dependency-groups]

@@ -206,13 +206,13 @@ def fetch_and_index_all_emails(
                 print(f"  Processed {i}/{len(messages)}...")
 
         except Exception as e:
-            print(f"❌ Error processing email {msg['id']}: {e}")
+            print(f" Error processing email {msg['id']}: {e}")
 
     print(f"✓ Indexing {len(documents)} emails to Elasticsearch...")
     result = es_store.bulk_index(documents)
 
     print(f"✓ Successfully indexed {result['success']} emails")
     if result["failed"]:
-        print(f"⚠️  Failed to index {result['failed']} emails")
+        print(f"Failed to index {result['failed']} emails")
 
     return documents

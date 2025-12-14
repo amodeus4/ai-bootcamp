@@ -1,6 +1,7 @@
 """Attachment handling and document parsing with markitdown."""
 
 import base64
+import re
 from typing import Dict, List, Optional
 from pathlib import Path
 from datetime import datetime
@@ -9,6 +10,89 @@ try:
     import markitdown
 except ImportError:
     markitdown = None
+
+
+# MIME types to skip (images used in signatures, inline graphics, etc.)
+SKIP_ATTACHMENT_MIMES = {
+    "image/gif",
+    "image/x-icon",
+    "image/bmp",
+}
+
+# Filename patterns to skip (common signature/logo filenames)
+SKIP_ATTACHMENT_PATTERNS = [
+    r"^image\d*\.",  # image001.png, image.gif
+    r"^logo",  # logo.png, logo-company.jpg
+    r"^signature",  # signature.png
+    r"^icon",  # icon.png
+    r"^banner",  # banner.jpg
+    r"^footer",  # footer.png
+    r"^header",  # header.jpg
+    r"_signature\.",  # company_signature.png
+    r"_logo\.",  # company_logo.png
+]
+
+
+def is_relevant_attachment(filename: str, mime_type: str) -> bool:
+    """Check if an attachment is relevant (not a signature/logo/inline image)."""
+    if not filename:
+        return False
+
+    filename_lower = filename.lower()
+
+    # Skip certain MIME types entirely
+    if mime_type in SKIP_ATTACHMENT_MIMES:
+        return False
+
+    # Skip small inline images (likely signatures)
+    for pattern in SKIP_ATTACHMENT_PATTERNS:
+        if re.match(pattern, filename_lower):
+            return False
+
+    # Relevant document extensions - always include
+    relevant_extensions = {
+        ".pdf",
+        ".doc",
+        ".docx",
+        ".xls",
+        ".xlsx",
+        ".csv",
+        ".txt",
+        ".ppt",
+        ".pptx",
+        ".rtf",
+        ".odt",
+        ".ods",
+        ".zip",
+        ".rar",
+    }
+
+    ext = "." + filename_lower.rsplit(".", 1)[-1] if "." in filename_lower else ""
+
+    # If it has a relevant extension, always include
+    if ext in relevant_extensions:
+        return True
+
+    # For images, only include if they look like actual attachments (not inline)
+    if mime_type.startswith("image/"):
+        # Skip if filename is very short or generic
+        if len(filename_lower) < 10:
+            return False
+        # Include if it has meaningful words
+        meaningful_words = [
+            "invoice",
+            "receipt",
+            "document",
+            "scan",
+            "contract",
+            "report",
+            "screenshot",
+        ]
+        if any(word in filename_lower for word in meaningful_words):
+            return True
+        return False
+
+    return True
 
 
 class AttachmentManager:
@@ -146,6 +230,7 @@ class AttachmentManager:
             "total": len(attachments_info),
             "downloaded": 0,
             "parsed": 0,
+            "skipped": 0,
             "attachments": [],
             "content": [],  # All parsed content combined
             "errors": [],
@@ -155,6 +240,11 @@ class AttachmentManager:
             filename = att.get("filename", "unknown")
             mime_type = att.get("mimeType", "")
             attachment_id = att.get("attachmentId", "")
+
+            # Skip irrelevant attachments (signatures, logos, inline images)
+            if not is_relevant_attachment(filename, mime_type):
+                parsed_attachments["skipped"] += 1
+                continue
 
             # Download attachment
             file_path = self.download_attachment(

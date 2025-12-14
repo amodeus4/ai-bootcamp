@@ -12,6 +12,8 @@ from email_agent import (
     ElasticsearchWriteTool,
     ConversationHistoryTool,
     SearchAttachmentsTool,
+    CategorizeEmailsTool,
+    PriorityInboxTool,
     fetch_and_index_all_emails,
 )
 
@@ -63,14 +65,24 @@ def main():
     write_tool = ElasticsearchWriteTool(es_store)
     conversation_tool = ConversationHistoryTool(es_store)
     attachment_tool = SearchAttachmentsTool(es_store)
+    categorize_tool = CategorizeEmailsTool(es_store)
+    priority_tool = PriorityInboxTool(es_store)
     print(
-        "✓ Tools initialized: gmail_fetch, elasticsearch_search, conversation_history, search_attachments, elasticsearch_write"
+        "✓ Tools initialized: gmail_fetch, elasticsearch_search, conversation_history, search_attachments, elasticsearch_write, categorize_emails, priority_inbox"
     )
 
     # Create agent
     print("\n🤖 Creating email agent...")
     agent = EmailAgent(
-        tools=[gmail_tool, search_tool, write_tool, conversation_tool, attachment_tool]
+        tools=[
+            gmail_tool,
+            search_tool,
+            write_tool,
+            conversation_tool,
+            attachment_tool,
+            categorize_tool,
+            priority_tool,
+        ]
     )
     print("✓ Agent ready")
 

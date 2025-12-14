@@ -10,6 +10,8 @@ from email_agent import (
     ElasticsearchWriteTool,
     ConversationHistoryTool,
     SearchAttachmentsTool,
+    CategorizeEmailsTool,
+    PriorityInboxTool,
 )
 
 
@@ -184,6 +186,8 @@ class TestToolConfiguration:
             ElasticsearchWriteTool,
             ConversationHistoryTool,
             SearchAttachmentsTool,
+            CategorizeEmailsTool,
+            PriorityInboxTool,
         ]
 
         for tool_class in required_tools:
@@ -202,7 +206,27 @@ class TestToolConfiguration:
             ElasticsearchWriteTool,
             ConversationHistoryTool,
             SearchAttachmentsTool,
+            CategorizeEmailsTool,
+            PriorityInboxTool,
         ]
 
         names = [t.name for t in tool_classes if hasattr(t, "name")]
         assert len(names) == len(set(names)), "Tool names should be unique"
+
+
+class TestSystemPromptBehavior:
+    """Tests for agent system prompt behavior."""
+
+    def test_system_prompt_mentions_mys_context(self):
+        """Test that system prompt includes MYS business context."""
+        agent = EmailAgent(tools=[])
+        assert "MYS" in agent.system_prompt
+        assert "payment_request_non_mys" in agent.system_prompt
+
+    def test_system_prompt_explains_payment_request_logic(self):
+        """Test that system prompt explains non-MYS payment filtering."""
+        agent = EmailAgent(tools=[])
+        # Should explain that MYS emails should be excluded for payment requests
+        prompt_lower = agent.system_prompt.lower()
+        assert "external" in prompt_lower or "non-mys" in prompt_lower
+        assert "categorize" in prompt_lower
